@@ -4,15 +4,17 @@ import MouseGlow from "@/components/MouseGlow";
 import Hero from "@/components/Hero";
 import TrustCounters from "@/components/TrustCounters";
 import LogoMarquee from "@/components/LogoMarquee";
+import AboutTeaser from "@/components/AboutTeaser";
 import ProcessTimeline from "@/components/ProcessTimeline";
 import ServicesTeaser from "@/components/ServicesTeaser";
 import CaseStudiesSection from "@/components/CaseStudiesSection";
 import PricingPreviewSection from "@/components/PricingPreviewSection";
+import ContactFormSection from "@/components/ContactFormSection";
 import FAQSection from "@/components/FAQSection";
 
 export const metadata = {
-  title: "Growth Agency — High Conversion Web & Marketing Engine",
-  description: "We don't run ads. We build businesses that customers can't ignore. Custom development, technical SEO, and conversion optimization.",
+  title: "Growth Agency — Premium Digital Growth & Performance Engine",
+  description: "We don't run generic ads. We build businesses that customers can't ignore. Custom development, technical SEO, and conversion optimization.",
 };
 
 export default function Home() {
@@ -25,10 +27,12 @@ export default function Home() {
         <Hero />
         <TrustCounters />
         <LogoMarquee />
+        <AboutTeaser />
         <ProcessTimeline />
         <ServicesTeaser />
         <CaseStudiesSection />
         <PricingPreviewSection />
+        <ContactFormSection />
         <FAQSection />
       </main>
 
