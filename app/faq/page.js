@@ -97,7 +97,7 @@ export default function FAQPage() {
           {/* CTA Box */}
           <div className="text-center bg-white/[0.01] border border-white/[0.03] p-12 md:p-16 rounded-2xl relative overflow-hidden max-w-4xl mx-auto">
             <div className="absolute inset-0 bg-gradient-to-b from-amber-500/5 to-transparent pointer-events-none" />
-            <h2 className="text-2xl md:text-4xl font-extrabold tracking-tight text-white mb-6">
+            <h2 className="text-2xl md:text-4xl font-extrabold tracking-tight text-slate-900 mb-6">
               Still have questions?
             </h2>
             <p className="text-xs sm:text-sm text-text-secondary max-w-md mx-auto mb-8 font-light leading-relaxed">

@@ -35,7 +35,7 @@ export default async function BlogPostPage({ params }) {
       <>
         <Navbar />
         <main className="pt-32 pb-24 text-center">
-          <h1 className="text-2xl font-bold text-white mb-4">Post Not Found</h1>
+          <h1 className="text-2xl font-bold text-slate-900 mb-4">Post Not Found</h1>
           <Link href="/blog" className="btn-secondary !text-xs">Back to Blog</Link>
         </main>
         <Footer />
@@ -65,7 +65,7 @@ export default async function BlogPostPage({ params }) {
               Back to Articles
             </Link>
             <span className="label block mb-4">{post.tag}</span>
-            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-6 leading-tight">
               {post.title}
             </h1>
             <div className="flex gap-4 items-center text-xs text-text-tertiary">
@@ -77,7 +77,7 @@ export default async function BlogPostPage({ params }) {
 
           {/* Render parsed HTML content cleanly with custom styling */}
           <div 
-            className="prose prose-invert max-w-none text-sm md:text-base text-text-secondary leading-relaxed font-light space-y-6 [&>h3]:text-lg [&>h3]:font-bold [&>h3]:text-white [&>h3]:mt-10 [&>p]:leading-relaxed [&>ul]:list-disc [&>ul]:pl-6 [&>ul]:space-y-2 [&>ul]:text-text-secondary [&>ul_strong]:text-white [&>p_strong]:text-white [&>blockquote]:border-l-4 [&>blockquote]:border-amber-500 [&>blockquote]:pl-4 [&>blockquote]:italic"
+            className="prose max-w-none text-sm md:text-base text-text-secondary leading-relaxed font-light space-y-6 [&>h3]:text-lg [&>h3]:font-bold [&>h3]:text-slate-900 [&>h3]:mt-10 [&>p]:leading-relaxed [&>ul]:list-disc [&>ul]:pl-6 [&>ul]:space-y-2 [&>ul]:text-text-secondary [&>ul_strong]:text-slate-900 [&>p_strong]:text-slate-900 [&>blockquote]:border-l-4 [&>blockquote]:border-amber-500 [&>blockquote]:pl-4 [&>blockquote]:italic"
             dangerouslySetInnerHTML={{ __html: htmlContent }}
           />
         </article>

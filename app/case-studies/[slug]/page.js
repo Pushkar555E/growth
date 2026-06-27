@@ -93,7 +93,7 @@ export default function CaseStudySubPage({ params }) {
     return (
       <>
         <Navbar />
-        <main className="min-h-screen flex items-center justify-center bg-bg-primary text-white pt-20">
+        <main className="min-h-screen flex items-center justify-center bg-bg-primary text-slate-900 pt-20">
           <div className="text-center">
             <h1 className="text-3xl font-bold mb-4">Case Study Not Found</h1>
             <Link href="/#case-studies" className="btn-primary">View All Work</Link>
@@ -109,7 +109,7 @@ export default function CaseStudySubPage({ params }) {
       <Navbar />
       <MouseGlow />
 
-      <main className="pt-32 pb-24 relative overflow-hidden bg-bg-primary text-white">
+      <main className="pt-32 pb-24 relative overflow-hidden bg-bg-primary text-slate-900">
         {/* Glow */}
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-amber-500/5 blur-[120px] rounded-full pointer-events-none" />
 
@@ -122,7 +122,7 @@ export default function CaseStudySubPage({ params }) {
             <span className="text-[10px] uppercase tracking-widest text-amber-400 font-bold block mb-4">
               {study.sub}
             </span>
-            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-6 leading-tight">
               {study.title}
             </h1>
           </div>
@@ -131,15 +131,15 @@ export default function CaseStudySubPage({ params }) {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6 rounded-xl bg-white/[0.01] border border-white/[0.03] mb-16">
             <div>
               <span className="text-[10px] text-text-tertiary uppercase tracking-wider block mb-1">Niche</span>
-              <span className="text-xs text-white font-medium">{study.snapshot.niche}</span>
+              <span className="text-xs text-slate-900 font-medium">{study.snapshot.niche}</span>
             </div>
             <div>
               <span className="text-[10px] text-text-tertiary uppercase tracking-wider block mb-1">Scope</span>
-              <span className="text-xs text-white font-medium">{study.snapshot.scope}</span>
+              <span className="text-xs text-slate-900 font-medium">{study.snapshot.scope}</span>
             </div>
             <div>
               <span className="text-[10px] text-text-tertiary uppercase tracking-wider block mb-1">Duration</span>
-              <span className="text-xs text-white font-medium">{study.snapshot.duration}</span>
+              <span className="text-xs text-slate-900 font-medium">{study.snapshot.duration}</span>
             </div>
           </div>
 
@@ -168,7 +168,7 @@ export default function CaseStudySubPage({ params }) {
                   <div key={p.step} className="flex gap-4">
                     <span className="text-lg font-bold text-amber-400/40 font-mono shrink-0">{p.step}</span>
                     <div>
-                      <h3 className="text-sm font-bold text-white mb-1">{p.title}</h3>
+                      <h3 className="text-sm font-bold text-slate-900 mb-1">{p.title}</h3>
                       <p className="text-xs text-text-secondary font-light leading-relaxed">{p.desc}</p>
                     </div>
                   </div>
@@ -179,11 +179,11 @@ export default function CaseStudySubPage({ params }) {
 
           {/* Testimonial */}
           <div className="max-w-3xl mx-auto text-center mb-24">
-            <blockquote className="text-lg md:text-xl italic text-white font-light leading-relaxed mb-6">
+            <blockquote className="text-lg md:text-xl italic text-slate-900 font-light leading-relaxed mb-6">
               &ldquo;{study.testimonial.quote}&rdquo;
             </blockquote>
             <div className="text-xs">
-              <span className="font-bold text-white block mb-0.5">{study.testimonial.author}</span>
+              <span className="font-bold text-slate-900 block mb-0.5">{study.testimonial.author}</span>
               <span className="text-text-secondary font-light">{study.testimonial.role}</span>
             </div>
           </div>
@@ -191,7 +191,7 @@ export default function CaseStudySubPage({ params }) {
           {/* CTA */}
           <div className="text-center bg-white/[0.01] border border-white/[0.03] p-12 md:p-16 rounded-2xl relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-amber-500/5 to-transparent pointer-events-none" />
-            <h2 className="text-2xl md:text-4xl font-extrabold tracking-tight text-white mb-6 animate-pulse">
+            <h2 className="text-2xl md:text-4xl font-extrabold tracking-tight text-slate-900 mb-6 animate-pulse">
               Ready to replicate these results?
             </h2>
             <p className="text-xs sm:text-sm text-text-secondary max-w-md mx-auto mb-8 font-light leading-relaxed">

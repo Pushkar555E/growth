@@ -125,7 +125,7 @@ function FAQItem({ faq }) {
     <div className="border-b border-white/[0.04] py-4">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex justify-between items-center text-left text-sm font-semibold text-white py-2 focus:outline-none"
+        className="w-full flex justify-between items-center text-left text-sm font-semibold text-slate-900 py-2 focus:outline-none"
       >
         <span>{faq.q}</span>
         <ChevronDown className={`w-4 h-4 text-amber-400 transform transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`} />
@@ -157,7 +157,7 @@ export default function ServiceSubPage({ params }) {
     return (
       <>
         <Navbar />
-        <main className="min-h-screen flex items-center justify-center bg-bg-primary text-white pt-20">
+        <main className="min-h-screen flex items-center justify-center bg-bg-primary text-slate-900 pt-20">
           <div className="text-center">
             <h1 className="text-3xl font-bold mb-4">Service Not Found</h1>
             <Link href="/services" className="btn-primary">View All Services</Link>
@@ -175,7 +175,7 @@ export default function ServiceSubPage({ params }) {
       <Navbar />
       <MouseGlow />
 
-      <main className="pt-32 pb-24 relative overflow-hidden bg-bg-primary text-white">
+      <main className="pt-32 pb-24 relative overflow-hidden bg-bg-primary text-slate-900">
         {/* Glow */}
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-amber-500/5 blur-[120px] rounded-full pointer-events-none" />
 
@@ -188,7 +188,7 @@ export default function ServiceSubPage({ params }) {
             <div className="inline-flex p-3 rounded-xl bg-white/[0.02] border border-white/[0.04] mb-6">
               <Icon className="w-8 h-8 text-amber-400" />
             </div>
-            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-6 leading-tight">
               {service.title}
             </h1>
             <p className="body-md text-text-secondary leading-relaxed font-light">
@@ -233,7 +233,7 @@ export default function ServiceSubPage({ params }) {
                   <div key={step.step} className="flex gap-4">
                     <span className="text-lg font-bold text-amber-400/40 font-mono shrink-0">{step.step}</span>
                     <div>
-                      <h3 className="text-sm font-bold text-white mb-1">{step.title}</h3>
+                      <h3 className="text-sm font-bold text-slate-900 mb-1">{step.title}</h3>
                       <p className="text-xs text-text-secondary font-light leading-relaxed">{step.desc}</p>
                     </div>
                   </div>
@@ -246,7 +246,7 @@ export default function ServiceSubPage({ params }) {
           <div className="glass p-8 bg-bg-card/50 border border-white/[0.03] rounded-xl mb-24 flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="space-y-2">
               <span className="text-[10px] uppercase tracking-widest text-amber-400 font-bold">Proof of Result</span>
-              <h3 className="text-xl font-bold text-white">{service.proof.metric}</h3>
+              <h3 className="text-xl font-bold text-slate-900">{service.proof.metric}</h3>
               <p className="text-xs text-text-secondary font-light leading-relaxed max-w-xl">{service.proof.details}</p>
             </div>
             <Link href="/contact" className="btn-primary whitespace-nowrap">Book a Strategy Call</Link>
@@ -265,7 +265,7 @@ export default function ServiceSubPage({ params }) {
           {/* CTA */}
           <div className="text-center bg-white/[0.01] border border-white/[0.03] p-12 md:p-16 rounded-2xl relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-amber-500/5 to-transparent pointer-events-none" />
-            <h2 className="text-2xl md:text-4xl font-extrabold tracking-tight text-white mb-6">
+            <h2 className="text-2xl md:text-4xl font-extrabold tracking-tight text-slate-900 mb-6">
               Ready to claim your strategy?
             </h2>
             <p className="text-xs sm:text-sm text-text-secondary max-w-md mx-auto mb-8 font-light leading-relaxed">
