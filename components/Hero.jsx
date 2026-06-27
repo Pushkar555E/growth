@@ -36,7 +36,8 @@ export default function Hero() {
       <div className="absolute inset-0 hero-grid opacity-[0.2] pointer-events-none" />
 
       {/* Floating background gradient blobs */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-blob bg-blob-purple opacity-20" />
+      <div className="absolute top-1/4 left-1/2 w-[600px] h-[400px] bg-blob bg-blob-purple animate-pulse-slow pointer-events-none" />
+      <div className="absolute bottom-10 left-1/4 w-[400px] h-[400px] bg-blob bg-blob-cyan animate-float opacity-10 pointer-events-none" />
 
       <div className="container-tight relative z-10 flex flex-col items-center text-center">
         {/* Badge */}
