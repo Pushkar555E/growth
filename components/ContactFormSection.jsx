@@ -10,16 +10,49 @@ export default function ContactFormSection() {
     business: "",
     whatsapp: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const subject = encodeURIComponent(`FREE Audit Request from Homepage - ${formData.business}`);
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\nBusiness: ${formData.business}\nWhatsApp: ${formData.whatsapp}`
-    );
-    window.open(`mailto:audit@growthagency.com?subject=${subject}&body=${body}`);
-    setSubmitted(true);
+    setIsSubmitting(true);
+    setErrorMsg("");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "998039d1-14f5-4114-82c5-2e0d6caca091",
+          subject: `New Homepage Lead: Free Growth Audit - ${formData.business}`,
+          from_name: "Growth Agency Lead Engine",
+          name: formData.name,
+          email: formData.email,
+          message: `
+Name: ${formData.name}
+Email: ${formData.email}
+Business: ${formData.business}
+WhatsApp: ${formData.whatsapp}
+          `,
+        }),
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        setSubmitted(true);
+        setFormData({ name: "", email: "", business: "", whatsapp: "" });
+      } else {
+        setErrorMsg(result.message || "Something went wrong. Please try again.");
+      }
+    } catch (err) {
+      setErrorMsg("Unable to connect to the server. Please check your internet connection.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -67,9 +100,9 @@ export default function ContactFormSection() {
                 {submitted ? (
                   <div className="text-center py-8">
                     <div className="text-4xl mb-4" role="img" aria-label="success party">🎉</div>
-                    <h3 className="text-xl font-bold text-white mb-2">Audit Request Prepared!</h3>
+                    <h3 className="text-xl font-bold text-white mb-2">Audit Requested Successfully!</h3>
                     <p className="text-xs text-text-secondary mb-6 font-light">
-                      We have drafted the audit request inside your default email client. Check your mail application!
+                      Thank you! Your free growth audit request has been sent. We will review your site and email you a custom blueprint report in 24 hours.
                     </p>
                     <button
                       onClick={() => setSubmitted(false)}
@@ -80,6 +113,11 @@ export default function ContactFormSection() {
                   </div>
                 ) : (
                   <form id="home-contact-form" onSubmit={handleSubmit} className="space-y-4">
+                    {errorMsg && (
+                      <div className="p-3.5 text-xs rounded-lg bg-rose-500/10 border border-rose-500/20 text-rose-300 font-light">
+                        {errorMsg}
+                      </div>
+                    )}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
                         <label htmlFor="home-name" className="block text-[10px] font-semibold text-text-secondary uppercase tracking-widest mb-1.5">
@@ -89,10 +127,11 @@ export default function ContactFormSection() {
                           id="home-name"
                           type="text"
                           required
+                          disabled={isSubmitting}
                           placeholder="Rahul Sharma"
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                          className="w-full bg-white/[0.02] border border-white/[0.04] rounded-lg px-4 py-2.5 text-xs text-white placeholder:text-text-muted focus:outline-none focus:border-amber-500/50 transition-colors"
+                          className="w-full bg-white/[0.02] border border-white/[0.04] rounded-lg px-4 py-2.5 text-xs text-white placeholder:text-text-muted focus:outline-none focus:border-amber-500/50 transition-colors disabled:opacity-50"
                         />
                       </div>
                       <div>
@@ -103,10 +142,11 @@ export default function ContactFormSection() {
                           id="home-email"
                           type="email"
                           required
+                          disabled={isSubmitting}
                           placeholder="rahul@business.com"
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          className="w-full bg-white/[0.02] border border-white/[0.04] rounded-lg px-4 py-2.5 text-xs text-white placeholder:text-text-muted focus:outline-none focus:border-amber-500/50 transition-colors"
+                          className="w-full bg-white/[0.02] border border-white/[0.04] rounded-lg px-4 py-2.5 text-xs text-white placeholder:text-text-muted focus:outline-none focus:border-amber-500/50 transition-colors disabled:opacity-50"
                         />
                       </div>
                     </div>
@@ -120,10 +160,11 @@ export default function ContactFormSection() {
                           id="home-business"
                           type="text"
                           required
+                          disabled={isSubmitting}
                           placeholder="Sharma Clinic / Dental Care"
                           value={formData.business}
                           onChange={(e) => setFormData({ ...formData, business: e.target.value })}
-                          className="w-full bg-white/[0.02] border border-white/[0.04] rounded-lg px-4 py-2.5 text-xs text-white placeholder:text-text-muted focus:outline-none focus:border-amber-500/50 transition-colors"
+                          className="w-full bg-white/[0.02] border border-white/[0.04] rounded-lg px-4 py-2.5 text-xs text-white placeholder:text-text-muted focus:outline-none focus:border-amber-500/50 transition-colors disabled:opacity-50"
                         />
                       </div>
                       <div>
@@ -134,19 +175,21 @@ export default function ContactFormSection() {
                           id="home-whatsapp"
                           type="tel"
                           required
+                          disabled={isSubmitting}
                           placeholder="+91 98765 43210"
                           value={formData.whatsapp}
                           onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
-                          className="w-full bg-white/[0.02] border border-white/[0.04] rounded-lg px-4 py-2.5 text-xs text-white placeholder:text-text-muted focus:outline-none focus:border-amber-500/50 transition-colors"
+                          className="w-full bg-white/[0.02] border border-white/[0.04] rounded-lg px-4 py-2.5 text-xs text-white placeholder:text-text-muted focus:outline-none focus:border-amber-500/50 transition-colors disabled:opacity-50"
                         />
                       </div>
                     </div>
 
                     <button
                       type="submit"
-                      className="w-full btn-primary !py-3 !text-xs font-semibold uppercase tracking-wider mt-2"
+                      disabled={isSubmitting}
+                      className="w-full btn-primary !py-3 !text-xs font-semibold uppercase tracking-wider mt-2 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      Claim Free Audit
+                      {isSubmitting ? "Requesting..." : "Claim Free Audit"}
                     </button>
                   </form>
                 )}
