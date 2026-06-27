@@ -173,7 +173,7 @@ Message: ${formData.message}
                           type="tel"
                           required
                           disabled={isSubmitting}
-                          placeholder="+91 98765 43210"
+                          placeholder="+91 62908 19569"
                           value={formData.whatsapp}
                           onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
                           className="w-full bg-white/[0.02] border border-white/[0.04] rounded-lg px-4 py-3 text-xs text-white placeholder:text-text-muted focus:outline-none focus:border-amber-500/50 transition-colors disabled:opacity-50"
@@ -232,9 +232,15 @@ Message: ${formData.message}
                     <Phone className="w-4 h-4 text-amber-400" />
                   </div>
                   <div>
-                    <span className="text-[10px] text-text-tertiary uppercase tracking-wider block mb-0.5">Phone / WhatsApp</span>
-                    <a href="tel:+919876543210" onClick={trackPhoneClick} className="text-xs text-white font-medium hover:text-amber-400 transition-colors">
-                      +91 98765 43210
+                    <span className="text-[10px] text-text-tertiary uppercase tracking-wider block mb-0.5">WhatsApp</span>
+                    <a
+                      href="https://wa.me/916290819569"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      onClick={trackPhoneClick}
+                      className="text-xs text-white font-medium hover:text-amber-400 transition-colors"
+                    >
+                      +91 62908 19569
                     </a>
                   </div>
                 </div>
