@@ -32,7 +32,7 @@ export default function Footer() {
           <Link href="/" id="footer-logo" className="flex items-center gap-2 group w-max">
             <div className="relative w-8 h-8 flex items-center justify-center">
               <img 
-                src="/logo.png" 
+                src="/logo.jpeg" 
                 alt="Conversion X Logo" 
                 className="w-full h-full object-contain"
                 onError={(e) => {

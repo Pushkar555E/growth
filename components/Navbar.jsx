@@ -29,7 +29,7 @@ export default function Navbar() {
         >
           <div className="relative w-8 h-8 flex items-center justify-center">
             <img 
-              src="/logo.png" 
+              src="/logo.jpeg" 
               alt="Conversion X Logo" 
               className="w-full h-full object-contain group-hover:scale-[1.03] transition-transform duration-300"
               onError={(e) => {
