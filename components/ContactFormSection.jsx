@@ -30,7 +30,7 @@ export default function ContactFormSection() {
         body: JSON.stringify({
           access_key: "998039d1-14f5-4114-82c5-2e0d6caca091",
           subject: `New Homepage Lead: Free Growth Audit - ${formData.business}`,
-          from_name: "Growth Agency Lead Engine",
+          from_name: "Conversion X Lead Engine",
           name: formData.name,
           email: formData.email,
           message: `

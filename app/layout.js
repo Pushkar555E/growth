@@ -2,10 +2,10 @@ import "./globals.css";
 import Script from "next/script";
 
 export const metadata = {
-  metadataBase: new URL("https://growthagency.com"),
+  metadataBase: new URL("https://conversionx.in"),
   title: {
-    default: "Growth Agency — Premium Digital Growth & Performance Engine",
-    template: "%s | Growth Agency",
+    default: "Conversion X — Premium Digital Growth & Performance Engine",
+    template: "%s | Conversion X",
   },
   description: "We don't run generic ads. We engineer responsive websites, local SEO blueprints, and high-converting paid acquisition funnels for local businesses.",
   keywords: [
@@ -18,25 +18,25 @@ export const metadata = {
     "Meta Ads Management",
     "High Conversion Websites",
   ],
-  authors: [{ name: "Growth Team" }],
-  creator: "Growth Team",
-  publisher: "Growth Agency",
+  authors: [{ name: "Conversion X Team" }],
+  creator: "Conversion X Team",
+  publisher: "Conversion X",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
   openGraph: {
-    title: "Growth Agency — Premium Digital Growth & Performance Engine",
+    title: "Conversion X — Premium Digital Growth & Performance Engine",
     description: "We don't run generic ads. We engineer custom web systems, high rank local SEO, and Meta/Google acquisition paths.",
-    url: "https://growthagency.com",
-    siteName: "Growth Agency",
+    url: "https://conversionx.in",
+    siteName: "Conversion X",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Growth Agency — Premium Digital Growth Engine",
+    title: "Conversion X — Premium Digital Growth Engine",
     description: "We build custom websites and target marketing funnels that local customers can't ignore.",
   },
   robots: {

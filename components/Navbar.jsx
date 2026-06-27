@@ -28,10 +28,10 @@ export default function Navbar() {
           className="flex items-center gap-2 group focus:outline-none"
         >
           <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center font-extrabold text-sm text-black group-hover:scale-[1.03] transition-transform duration-300">
-            G
+            C
           </span>
           <span className="font-bold text-sm uppercase tracking-[0.2em] text-white group-hover:text-amber-400 transition-colors duration-300">
-            Growth
+            Conversion X
           </span>
         </Link>
 

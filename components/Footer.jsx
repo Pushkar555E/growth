@@ -31,10 +31,10 @@ export default function Footer() {
         <div className="lg:col-span-4 space-y-6">
           <Link href="/" id="footer-logo" className="flex items-center gap-2 group w-max">
             <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center font-extrabold text-sm text-black">
-              G
+              C
             </span>
             <span className="font-bold text-sm uppercase tracking-[0.2em] text-white">
-              Growth
+              Conversion X
             </span>
           </Link>
           <p className="body-sm text-xs leading-relaxed max-w-xs font-light text-text-secondary">
@@ -103,8 +103,8 @@ export default function Footer() {
           <ul className="space-y-3">
             <li className="flex items-center gap-2">
               <Mail className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-              <a href="mailto:hello@growthagency.in" className="text-xs text-text-secondary hover:text-white transition-colors">
-                hello@growthagency.in
+              <a href="mailto:hello@conversionx.in" className="text-xs text-text-secondary hover:text-white transition-colors">
+                hello@conversionx.in
               </a>
             </li>
             <li className="flex items-center gap-2">
@@ -132,7 +132,7 @@ export default function Footer() {
       {/* Footer Bottom */}
       <div className="container-tight border-t border-white/[0.02] pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
         <p className="body-sm text-xs text-text-tertiary">
-          © {new Date().getFullYear()} Growth Agency. All rights reserved.
+          © {new Date().getFullYear()} Conversion X. All rights reserved.
         </p>
         <div className="flex gap-6 text-xs text-text-tertiary">
           <a href="#" className="hover:text-text-secondary transition-colors">Privacy Policy</a>

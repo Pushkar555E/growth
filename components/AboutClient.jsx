@@ -61,7 +61,7 @@ export default function AboutClient() {
               Founded on a simple realization: Most agencies sell visual vanity templates and generic traffic packages, while businesses need bookings and revenue.
             </p>
             <p className="body-md text-text-secondary leading-relaxed font-light">
-              We stripped away the fluff to build Growth Agency—an engineering-first marketing team focusing on custom Next.js web development, local maps SEO, and high-ROAS paid campaign configurations.
+              We stripped away the fluff to build Conversion X—an engineering-first marketing team focusing on custom Next.js web development, local maps SEO, and high-ROAS paid campaign configurations.
             </p>
           </div>
 
