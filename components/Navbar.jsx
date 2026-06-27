@@ -27,9 +27,24 @@ export default function Navbar() {
           id="nav-logo" 
           className="flex items-center gap-2 group focus:outline-none"
         >
-          <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center font-extrabold text-sm text-black group-hover:scale-[1.03] transition-transform duration-300">
-            C
-          </span>
+          <div className="relative w-8 h-8 flex items-center justify-center">
+            <img 
+              src="/logo.png" 
+              alt="Conversion X Logo" 
+              className="w-full h-full object-contain group-hover:scale-[1.03] transition-transform duration-300"
+              onError={(e) => {
+                e.target.style.display = 'none';
+                const fb = document.getElementById("nav-logo-fallback");
+                if (fb) fb.classList.remove("hidden");
+              }}
+            />
+            <span 
+              id="nav-logo-fallback" 
+              className="absolute inset-0 rounded-lg bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center font-extrabold text-sm text-black group-hover:scale-[1.03] transition-transform duration-300 hidden"
+            >
+              C
+            </span>
+          </div>
           <span className="font-bold text-sm uppercase tracking-[0.2em] text-white group-hover:text-amber-400 transition-colors duration-300">
             Conversion X
           </span>

@@ -30,9 +30,24 @@ export default function Footer() {
         {/* Brand - 3 cols */}
         <div className="lg:col-span-4 space-y-6">
           <Link href="/" id="footer-logo" className="flex items-center gap-2 group w-max">
-            <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center font-extrabold text-sm text-black">
-              C
-            </span>
+            <div className="relative w-8 h-8 flex items-center justify-center">
+              <img 
+                src="/logo.png" 
+                alt="Conversion X Logo" 
+                className="w-full h-full object-contain"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                  const fb = document.getElementById("footer-logo-fallback");
+                  if (fb) fb.classList.remove("hidden");
+                }}
+              />
+              <span 
+                id="footer-logo-fallback" 
+                className="absolute inset-0 rounded-lg bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center font-extrabold text-sm text-black hidden"
+              >
+                C
+              </span>
+            </div>
             <span className="font-bold text-sm uppercase tracking-[0.2em] text-white">
               Conversion X
             </span>
