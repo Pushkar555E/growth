@@ -14,8 +14,8 @@ const steps = [
     subtitle: "Understanding Your Business",
     description: "Deep dive audit of your existing traffic, ranking, metrics, and competitors. We pinpoint specific opportunities.",
     color: "from-amber-500 to-amber-600",
-    glowColor: "rgba(245, 158, 11, 0.15)",
-    lineColor: "#f59e0b",
+    glowColor: "rgba(6, 182, 212, 0.18)",
+    lineColor: "#06b6d4",
   },
   {
     id: 2,
@@ -23,8 +23,8 @@ const steps = [
     subtitle: "Creating The Blueprint",
     description: "A tailored design mock, keyword sheet, and content mapping strategy custom-made for your audience.",
     color: "from-amber-500 to-amber-600",
-    glowColor: "rgba(245, 158, 11, 0.15)",
-    lineColor: "#f59e0b",
+    glowColor: "rgba(6, 182, 212, 0.18)",
+    lineColor: "#06b6d4",
   },
   {
     id: 3,
@@ -32,8 +32,8 @@ const steps = [
     subtitle: "Executing with Precision",
     description: "Deploying high speed clean-coded pages, target campaigns, pixel trackings, and full SEO setup.",
     color: "from-amber-500 to-amber-600",
-    glowColor: "rgba(245, 158, 11, 0.15)",
-    lineColor: "#f59e0b",
+    glowColor: "rgba(6, 182, 212, 0.18)",
+    lineColor: "#06b6d4",
   },
   {
     id: 4,
@@ -41,8 +41,8 @@ const steps = [
     subtitle: "Compounding Growth",
     description: "Ongoing monthly performance reports, split test optimization, and channel expansions.",
     color: "from-amber-500 to-amber-600",
-    glowColor: "rgba(245, 158, 11, 0.15)",
-    lineColor: "#f59e0b",
+    glowColor: "rgba(6, 182, 212, 0.18)",
+    lineColor: "#06b6d4",
   },
 ];
 

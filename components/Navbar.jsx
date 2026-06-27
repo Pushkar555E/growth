@@ -28,9 +28,9 @@ export default function Navbar() {
           className="flex items-center gap-2 group focus:outline-none"
         >
           <div className="relative w-8 h-8 flex items-center justify-center">
-            <img 
+                      <img 
               src="/logo.jpeg" 
-              alt="Conversion X Logo" 
+              alt="Growth Nest Logo" 
               className="w-full h-full object-contain group-hover:scale-[1.03] transition-transform duration-300"
               onError={(e) => {
                 e.target.style.display = 'none';
@@ -40,13 +40,14 @@ export default function Navbar() {
             />
             <span 
               id="nav-logo-fallback" 
-              className="absolute inset-0 rounded-lg bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center font-extrabold text-sm text-black group-hover:scale-[1.03] transition-transform duration-300 hidden"
+              className="absolute inset-0 rounded-lg flex items-center justify-center font-extrabold text-[10px] text-white group-hover:scale-[1.03] transition-transform duration-300 hidden"
+              style={{ background: "linear-gradient(135deg, #2563eb, #06b6d4)" }}
             >
-              C
+              GN
             </span>
           </div>
-          <span className="font-bold text-sm uppercase tracking-[0.2em] text-white group-hover:text-amber-400 transition-colors duration-300">
-            Conversion X
+                    <span className="font-bold text-sm uppercase tracking-[0.2em] text-white group-hover:text-amber-400 transition-colors duration-300">
+            Growth Nest
           </span>
         </Link>
 

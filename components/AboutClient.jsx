@@ -57,11 +57,11 @@ export default function AboutClient() {
             <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-8">
               We treat marketing like <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-amber-400">performance engineering.</span>
             </h1>
-            <p className="body-md text-text-secondary leading-relaxed font-light mb-6">
+                        <p className="body-md text-text-secondary leading-relaxed font-light mb-6">
               Founded on a simple realization: Most agencies sell visual vanity templates and generic traffic packages, while businesses need bookings and revenue.
             </p>
             <p className="body-md text-text-secondary leading-relaxed font-light">
-              We stripped away the fluff to build Conversion X—an engineering-first marketing team focusing on custom Next.js web development, local maps SEO, and high-ROAS paid campaign configurations.
+              We stripped away the fluff to build Growth Nest — a performance-first digital marketing agency focusing on custom Next.js web development, local maps SEO, and high-ROAS paid campaign configurations.
             </p>
           </div>
 

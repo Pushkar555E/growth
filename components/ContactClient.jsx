@@ -35,7 +35,7 @@ export default function ContactClient() {
         body: JSON.stringify({
           access_key: "998039d1-14f5-4114-82c5-2e0d6caca091",
           subject: `New Lead: Free Growth Audit - ${formData.business}`,
-          from_name: "Conversion X Lead Engine",
+          from_name: "Growth Nest Lead Engine",
           name: formData.name,
           email: formData.email,
           message: `
@@ -221,8 +221,8 @@ Message: ${formData.message}
                   </div>
                   <div>
                     <span className="text-[10px] text-text-tertiary uppercase tracking-wider block mb-0.5">Email</span>
-                    <a href="mailto:hello@conversionx.in" onClick={trackEmailClick} className="text-xs text-white font-medium hover:text-amber-400 transition-colors">
-                      hello@conversionx.in
+                                        <a href="mailto:hello@growthnest.in" onClick={trackEmailClick} className="text-xs text-white font-medium hover:text-amber-400 transition-colors">
+                      hello@growthnest.in
                     </a>
                   </div>
                 </div>

@@ -39,7 +39,7 @@ export default function PricingPreviewSection() {
               whileHover={{ y: -4 }}
               className={`p-8 rounded-xl border transition-all duration-300 flex flex-col justify-between ${
                 pkg.isPopular 
-                  ? "bg-white/[0.02] border-amber-500/30 shadow-[0_0_30px_rgba(245,158,11,0.04)]" 
+                  ? "bg-white/[0.02] border-amber-500/30 shadow-[0_0_30px_rgba(6,182,212,0.08)]" 
                   : "bg-white/[0.01] border-white/[0.03] hover:border-white/[0.08]"
               }`}
             >

@@ -13,8 +13,8 @@ import ContactFormSection from "@/components/ContactFormSection";
 import FAQSection from "@/components/FAQSection";
 
 export const metadata = {
-  title: "Conversion X — Premium Digital Growth & Performance Engine",
-  description: "We don't run generic ads. We build businesses that customers can't ignore. Custom development, technical SEO, and conversion optimization.",
+  title: "Growth Nest — Digital Marketing Agency for Local Businesses",
+  description: "Growth Nest builds custom websites, local SEO strategies, social media campaigns, and high-ROAS paid ads that generate real leads for local businesses.",
 };
 
 export default function Home() {

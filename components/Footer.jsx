@@ -29,11 +29,11 @@ export default function Footer() {
         
         {/* Brand - 3 cols */}
         <div className="lg:col-span-4 space-y-6">
-          <Link href="/" id="footer-logo" className="flex items-center gap-2 group w-max">
+                    <Link href="/" id="footer-logo" className="flex items-center gap-2 group w-max">
             <div className="relative w-8 h-8 flex items-center justify-center">
               <img 
                 src="/logo.jpeg" 
-                alt="Conversion X Logo" 
+                alt="Growth Nest Logo" 
                 className="w-full h-full object-contain"
                 onError={(e) => {
                   e.target.style.display = 'none';
@@ -43,17 +43,18 @@ export default function Footer() {
               />
               <span 
                 id="footer-logo-fallback" 
-                className="absolute inset-0 rounded-lg bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center font-extrabold text-sm text-black hidden"
+                className="absolute inset-0 rounded-lg flex items-center justify-center font-extrabold text-[10px] text-white hidden"
+                style={{ background: "linear-gradient(135deg, #2563eb, #06b6d4)" }}
               >
-                C
+                GN
               </span>
             </div>
             <span className="font-bold text-sm uppercase tracking-[0.2em] text-white">
-              Conversion X
+              Growth Nest
             </span>
           </Link>
-          <p className="body-sm text-xs leading-relaxed max-w-xs font-light text-text-secondary">
-            We build custom responsive web assets, technical SEO setups, and high conversion Meta/Google paid campaigns.
+                    <p className="body-sm text-xs leading-relaxed max-w-xs font-light text-text-secondary">
+            Growth Nest builds custom responsive web assets, technical SEO setups, and high-conversion Meta/Google paid campaigns for local businesses.
           </p>
           
           {/* Social Icons */}
@@ -118,19 +119,19 @@ export default function Footer() {
           <ul className="space-y-3">
             <li className="flex items-center gap-2">
               <Mail className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-              <a href="mailto:hello@conversionx.in" className="text-xs text-text-secondary hover:text-white transition-colors">
-                hello@conversionx.in
+                            <a href="mailto:hello@growthnest.in" className="text-xs text-text-secondary hover:text-white transition-colors">
+                hello@growthnest.in
               </a>
             </li>
             <li className="flex items-center gap-2">
               <Phone className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-              <a
+                            <a
                 href="https://wa.me/916290819569"
                 target="_blank"
                 rel="noreferrer noopener"
                 className="text-xs text-text-secondary hover:text-white transition-colors"
               >
-                +91 62908 19569
+                +91 6290 819 569
               </a>
             </li>
             <li>
@@ -168,8 +169,8 @@ export default function Footer() {
 
       {/* Footer Bottom */}
       <div className="container-tight border-t border-white/[0.02] pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-        <p className="body-sm text-xs text-text-tertiary">
-          © {new Date().getFullYear()} Conversion X. All rights reserved.
+                <p className="body-sm text-xs text-text-tertiary">
+          © {new Date().getFullYear()} Growth Nest. All rights reserved.
         </p>
         <div className="flex gap-6 text-xs text-text-tertiary">
           <a href="#" className="hover:text-text-secondary transition-colors">Privacy Policy</a>
