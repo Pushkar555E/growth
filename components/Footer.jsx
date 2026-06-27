@@ -15,6 +15,7 @@ const footerLinks = {
     { id: "footer-link-pricing", label: "Pricing", href: "/pricing" },
     { id: "footer-link-industries", label: "Industries", href: "/industries" },
     { id: "footer-link-contact", label: "Contact Us", href: "/contact" },
+    { id: "footer-link-faq", label: "FAQ", href: "/faq" },
   ],
   Legal: [
     { id: "footer-link-privacy", label: "Privacy Policy", href: "#" },
