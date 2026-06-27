@@ -69,23 +69,27 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"
         />
-      </head>
-      <body className="min-h-screen bg-[#0f172a] text-white font-sans antialiased overflow-x-hidden selection:bg-amber-500/20 selection:text-white">
-        {/* Google Analytics Global Telemetry */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-MOCKTRACKER"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
+        {/* Google Tag Manager - Head */}
+        <Script id="gtm-script" strategy="afterInteractive">
           {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-MOCKTRACKER', {
-              page_path: window.location.pathname,
-            });
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-M5DX6BV7');
           `}
         </Script>
+      </head>
+      <body className="min-h-screen bg-[#0f172a] text-white font-sans antialiased overflow-x-hidden selection:bg-amber-500/20 selection:text-white">
+        {/* Google Tag Manager - Body (noscript) */}
+        <noscript>
+          <iframe 
+            src="https://www.googletagmanager.com/ns.html?id=GTM-M5DX6BV7"
+            height="0" 
+            width="0" 
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
         {children}
       </body>
     </html>
