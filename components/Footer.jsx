@@ -112,7 +112,7 @@ export default function Footer() {
           <ul className="space-y-3">
             <li className="flex items-center gap-2">
               <Mail className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-                            <a href="mailto:hello@growthnest.in" className="text-xs text-text-secondary hover:text-white transition-colors">
+                            <a href="mailto:hello@growthnest.in" className="text-xs text-text-secondary hover:text-slate-900 transition-colors">
                 hello@growthnest.in
               </a>
             </li>
@@ -122,7 +122,7 @@ export default function Footer() {
                 href="https://wa.me/916290819569"
                 target="_blank"
                 rel="noreferrer noopener"
-                className="text-xs text-text-secondary hover:text-white transition-colors"
+                className="text-xs text-text-secondary hover:text-slate-900 transition-colors"
               >
                 +91 6290 819 569
               </a>
