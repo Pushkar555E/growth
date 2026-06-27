@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { CheckCircle2 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MouseGlow from "@/components/MouseGlow";
@@ -86,7 +87,7 @@ WhatsApp: ${formData.whatsapp}
             <div className="glass p-8 bg-bg-card/75 border border-white/[0.02]">
               {submitted ? (
                 <div className="text-center py-8">
-                  <div className="text-4xl mb-4" role="img" aria-label="party popper">🎉</div>
+                  <CheckCircle2 className="w-8 h-8 text-emerald-400 mx-auto mb-4" />
                   <h2 className="text-xl font-bold text-white mb-2">Audit Requested Successfully!</h2>
                   <p className="text-xs text-text-secondary mb-6 font-light">
                     Thank you! Your free growth audit request has been sent. We will review your site and email you a custom blueprint report in 24 hours.

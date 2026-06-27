@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion } from "framer-motion";
+import { Monitor, Search, Smartphone, Zap } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MouseGlow from "@/components/MouseGlow";
@@ -11,7 +12,7 @@ const services = [
     id: "service-webdev",
     title: "Website Development",
     desc: "Speed-optimized, high-converting, clean-coded custom sites to capture and turn traffic into clients.",
-    icon: "💻",
+    icon: Monitor,
     features: [
       "Custom React / Next.js Setup",
       "Mobile Responsive First Design",
@@ -23,7 +24,7 @@ const services = [
     id: "service-seo",
     title: "Website SEO",
     desc: "Top ranks on Google Search & Map Pack to make your business the default local option.",
-    icon: "🔍",
+    icon: Search,
     features: [
       "Technical Website Audit",
       "Local Map Pack Optimization",
@@ -35,7 +36,7 @@ const services = [
     id: "service-social",
     title: "Social Media Management",
     desc: "A consistent content calendar, Reels, strategy, and custom design templates to build absolute authority.",
-    icon: "📱",
+    icon: Smartphone,
     features: [
       "Full Content Strategy & Research",
       "Engaging Reel Scripting & Editing",
@@ -47,7 +48,7 @@ const services = [
     id: "service-ads",
     title: "Paid Advertising",
     desc: "High ROAS Meta & Google ads optimized with precise pixels and target audience definitions.",
-    icon: "⚡",
+    icon: Zap,
     features: [
       "Meta Pixel & API Conversion Setup",
       "Laser Target Audience Research",
@@ -59,6 +60,7 @@ const services = [
 
 function TiltCard({ service }) {
   const cardRef = useRef(null);
+  const Icon = service.icon;
 
   const handleMouseMove = (e) => {
     const card = cardRef.current;
@@ -90,7 +92,9 @@ function TiltCard({ service }) {
       style={{ willChange: "transform" }}
     >
       <div>
-        <span className="text-3xl mb-6 block" role="img" aria-hidden="true">{service.icon}</span>
+        <div className="mb-6">
+          <Icon className="w-6 h-6 text-amber-400" />
+        </div>
         <h2 className="text-xl font-bold mb-4 text-white">{service.title}</h2>
         <p className="text-xs text-text-secondary mb-8 leading-relaxed font-light">{service.desc}</p>
         <ul className="space-y-3 mb-8">

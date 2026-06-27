@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { Sparkles } from "lucide-react";
 import { pricingData } from "../lib/pricing";
 
 export default function PricingPreviewSection() {
@@ -44,8 +45,8 @@ export default function PricingPreviewSection() {
             >
               <div>
                 {pkg.isPopular && (
-                  <div className="text-purple-400 text-[10px] font-semibold mb-4 tracking-widest uppercase">
-                    ⭐ Most Popular
+                  <div className="flex items-center text-amber-400 text-[10px] font-semibold mb-4 tracking-widest uppercase">
+                    <Sparkles className="w-3.5 h-3.5 mr-1" /> Most Popular
                   </div>
                 )}
                 <h3 className="text-xl font-bold text-white mb-2">{pkg.name}</h3>

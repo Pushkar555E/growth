@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { Check, CheckCircle2 } from "lucide-react";
 
 export default function ContactFormSection() {
   const [formData, setFormData] = useState({
@@ -77,11 +78,11 @@ WhatsApp: ${formData.whatsapp}
             </p>
             <div className="space-y-4 pt-4">
               <div className="flex items-center gap-3">
-                <span className="text-xl">✅</span>
+                <Check className="w-4 h-4 text-emerald-400 shrink-0" />
                 <span className="text-xs font-semibold uppercase tracking-wider text-text-secondary">Custom analysis video included</span>
               </div>
               <div className="flex items-center gap-3">
-                <span className="text-xl">✅</span>
+                <Check className="w-4 h-4 text-emerald-400 shrink-0" />
                 <span className="text-xs font-semibold uppercase tracking-wider text-text-secondary">Competitor keyword gap sheet</span>
               </div>
             </div>
@@ -99,7 +100,7 @@ WhatsApp: ${formData.whatsapp}
               <div className="glass p-8 bg-bg-card/75 border border-white/[0.02]">
                 {submitted ? (
                   <div className="text-center py-8">
-                    <div className="text-4xl mb-4" role="img" aria-label="success party">🎉</div>
+                    <CheckCircle2 className="w-8 h-8 text-emerald-400 mx-auto mb-4" />
                     <h3 className="text-xl font-bold text-white mb-2">Audit Requested Successfully!</h3>
                     <p className="text-xs text-text-secondary mb-6 font-light">
                       Thank you! Your free growth audit request has been sent. We will review your site and email you a custom blueprint report in 24 hours.

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { ShieldX, CalendarRange, ShieldCheck, Sparkles } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MouseGlow from "@/components/MouseGlow";
@@ -81,16 +82,16 @@ export default function PricingClient() {
 
           {/* Trust Badges */}
           <div className="mt-24 pt-12 border-t border-white/[0.02] flex flex-wrap items-center justify-center gap-12 text-center">
-            <div className="flex items-center gap-3">
-              <span className="text-xl" role="img" aria-hidden="true">🚫</span>
+            <div className="flex items-center gap-2">
+              <ShieldX className="w-4 h-4 text-rose-400" />
               <span className="text-xs font-semibold uppercase tracking-wider text-text-secondary">No Long Term Contract</span>
             </div>
-            <div className="flex items-center gap-3">
-              <span className="text-xl" role="img" aria-hidden="true">📅</span>
+            <div className="flex items-center gap-2">
+              <CalendarRange className="w-4 h-4 text-amber-400" />
               <span className="text-xs font-semibold uppercase tracking-wider text-text-secondary">Cancel Anytime</span>
             </div>
-            <div className="flex items-center gap-3">
-              <span className="text-xl" role="img" aria-hidden="true">⚡</span>
+            <div className="flex items-center gap-2">
+              <ShieldCheck className="w-4 h-4 text-emerald-400" />
               <span className="text-xs font-semibold uppercase tracking-wider text-text-secondary">Trusted by Local Businesses</span>
             </div>
           </div>
@@ -145,8 +146,8 @@ function SocialPricingView() {
         >
           <div>
             {pkg.isPopular && (
-              <div className="text-purple-400 text-[10px] font-semibold mb-4 tracking-widest uppercase">
-                ⭐ Most Popular
+              <div className="flex items-center text-amber-400 text-[10px] font-semibold mb-4 tracking-widest uppercase">
+                <Sparkles className="w-3.5 h-3.5 mr-1" /> Most Popular
               </div>
             )}
             <h3 className="text-xl font-bold mb-2 text-white">{pkg.name}</h3>
@@ -188,8 +189,8 @@ function SEOPricingView() {
         >
           <div>
             {pkg.isPopular && (
-              <div className="text-purple-400 text-[10px] font-semibold mb-4 tracking-widest uppercase">
-                ⭐ Most Popular
+              <div className="flex items-center text-amber-400 text-[10px] font-semibold mb-4 tracking-widest uppercase">
+                <Sparkles className="w-3.5 h-3.5 mr-1" /> Most Popular
               </div>
             )}
             <h3 className="text-xl font-bold mb-6 text-white">{pkg.name}</h3>
