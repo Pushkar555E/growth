@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Mail, Phone, ArrowRight } from "lucide-react";
+import { Mail, Phone, ArrowRight, MessageCircle } from "lucide-react";
 
 const footerLinks = {
   Services: [
@@ -133,6 +133,23 @@ export default function Footer() {
                 +91 62908 19569
               </a>
             </li>
+            <li>
+              <a
+                id="footer-whatsapp-btn"
+                href="https://wa.me/916290819569"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold text-white transition-all duration-300 hover:-translate-y-0.5"
+                style={{ background: "#25D366", boxShadow: "0 4px 14px rgba(37,211,102,0.25)" }}
+                aria-label="Chat on WhatsApp"
+              >
+                {/* WhatsApp SVG icon */}
+                <svg viewBox="0 0 32 32" className="w-4 h-4 shrink-0" fill="currentColor">
+                  <path d="M16.003 2.667C8.638 2.667 2.667 8.636 2.667 16c0 2.364.632 4.636 1.833 6.636L2.667 29.333l6.9-1.808A13.27 13.27 0 0 0 16.003 29.333C23.365 29.333 29.333 23.364 29.333 16S23.365 2.667 16.003 2.667Zm0 2.4c5.92 0 10.933 4.947 10.933 10.933 0 5.987-4.947 10.933-10.933 10.933a10.88 10.88 0 0 1-5.453-1.467l-.387-.227-3.987 1.04 1.08-3.853-.253-.4A10.869 10.869 0 0 1 5.07 16c0-5.987 4.947-10.933 10.933-10.933Zm-3.44 5.6c-.24 0-.627.093-.96.467-.32.373-1.226 1.2-1.226 2.92 0 1.72 1.253 3.387 1.426 3.627.173.24 2.44 3.84 5.987 5.226.84.32 1.493.507 2 .653.84.24 1.6.2 2.2.12.68-.093 2.08-.853 2.373-1.68.293-.827.293-1.52.213-1.68-.08-.147-.32-.24-.667-.4-.347-.16-2.08-1.027-2.4-1.147-.32-.12-.547-.16-.773.16-.24.32-.92 1.147-1.12 1.387-.213.24-.413.28-.76.093-.347-.173-1.467-.547-2.8-1.733-1.04-.92-1.733-2.053-1.947-2.4-.213-.347-.013-.533.147-.693.173-.173.373-.44.56-.667.187-.227.24-.387.373-.627.12-.253.067-.467-.04-.667-.107-.187-.773-1.893-1.067-2.587-.267-.68-.547-.587-.773-.587l-.653-.013Z" />
+                </svg>
+                Chat on WhatsApp
+              </a>
+            </li>
           </ul>
         </div>
 
@@ -160,5 +177,23 @@ export default function Footer() {
         </div>
       </div>
     </footer>
+
+    {/* Floating sticky WhatsApp button */}
+    <a
+      id="floating-whatsapp-btn"
+      href="https://wa.me/916290819569"
+      target="_blank"
+      rel="noreferrer noopener"
+      aria-label="Chat with us on WhatsApp"
+      className="fixed bottom-6 right-6 z-50 flex items-center gap-2.5 px-4 py-3 rounded-full font-semibold text-white text-xs shadow-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-1 group"
+      style={{ background: "#25D366", boxShadow: "0 8px 32px rgba(37,211,102,0.35)" }}
+    >
+      {/* Ping animation ring */}
+      <span className="absolute inset-0 rounded-full animate-ping opacity-20" style={{ background: "#25D366" }} />
+      <svg viewBox="0 0 32 32" className="w-5 h-5 shrink-0 relative z-10" fill="currentColor">
+        <path d="M16.003 2.667C8.638 2.667 2.667 8.636 2.667 16c0 2.364.632 4.636 1.833 6.636L2.667 29.333l6.9-1.808A13.27 13.27 0 0 0 16.003 29.333C23.365 29.333 29.333 23.364 29.333 16S23.365 2.667 16.003 2.667Zm0 2.4c5.92 0 10.933 4.947 10.933 10.933 0 5.987-4.947 10.933-10.933 10.933a10.88 10.88 0 0 1-5.453-1.467l-.387-.227-3.987 1.04 1.08-3.853-.253-.4A10.869 10.869 0 0 1 5.07 16c0-5.987 4.947-10.933 10.933-10.933Zm-3.44 5.6c-.24 0-.627.093-.96.467-.32.373-1.226 1.2-1.226 2.92 0 1.72 1.253 3.387 1.426 3.627.173.24 2.44 3.84 5.987 5.226.84.32 1.493.507 2 .653.84.24 1.6.2 2.2.12.68-.093 2.08-.853 2.373-1.68.293-.827.293-1.52.213-1.68-.08-.147-.32-.24-.667-.4-.347-.16-2.08-1.027-2.4-1.147-.32-.12-.547-.16-.773.16-.24.32-.92 1.147-1.12 1.387-.213.24-.413.28-.76.093-.347-.173-1.467-.547-2.8-1.733-1.04-.92-1.733-2.053-1.947-2.4-.213-.347-.013-.533.147-.693.173-.173.373-.44.56-.667.187-.227.24-.387.373-.627.12-.253.067-.467-.04-.667-.107-.187-.773-1.893-1.067-2.587-.267-.68-.547-.587-.773-.587l-.653-.013Z" />
+      </svg>
+      <span className="relative z-10 whitespace-nowrap">+91 6290 819 569</span>
+    </a>
   );
 }
