@@ -6,34 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MouseGlow from "@/components/MouseGlow";
 
-const blogPosts = [
-  {
-    slug: "why-speed-is-your-top-local-seo-ranking-factor",
-    title: "Why Website Speed is Your Number One Local SEO Ranking Factor",
-    excerpt: "Most local business sites score under 40 on Google PageSpeed. Discover why scoring 90+ cuts your customer acquisition costs in half.",
-    date: "Jun 24, 2026",
-    readTime: "4 min read",
-    tag: "Technical SEO",
-  },
-  {
-    slug: "how-to-optimize-google-map-pack-to-rank-number-one",
-    title: "The Local Map Pack Blueprint: How to Secure the #1 Position",
-    excerpt: "Google Maps drives over 60% of all direct call volume for clinics, salons, and restaurants. Learn our exact indexing checklist.",
-    date: "Jun 18, 2026",
-    readTime: "6 min read",
-    tag: "Local Maps",
-  },
-  {
-    slug: "stop-burning-budget-on-meta-ads",
-    title: "Stop Burning Ad Budget: Pixel Conversion Setup Done Right",
-    excerpt: "Why standard boost posts fail. Discover how setting up Custom Conversions and Meta API tracking scales your return on ad spend.",
-    date: "Jun 10, 2026",
-    readTime: "5 min read",
-    tag: "Paid Advertising",
-  },
-];
-
-export default function BlogClient() {
+export default function BlogClient({ posts }) {
   return (
     <>
       <Navbar />
@@ -54,7 +27,7 @@ export default function BlogClient() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {blogPosts.map((post, idx) => (
+            {posts.map((post, idx) => (
               <motion.article
                 key={post.slug}
                 initial={{ opacity: 0, y: 15 }}

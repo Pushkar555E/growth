@@ -1,4 +1,5 @@
 import BlogClient from "@/components/BlogClient";
+import { getSortedPostsData } from "@/lib/posts";
 
 export const metadata = {
   title: "Blog — Technical Marketing Blueprints & SEO Guides",
@@ -6,5 +7,6 @@ export const metadata = {
 };
 
 export default function BlogPage() {
-  return <BlogClient />;
+  const posts = getSortedPostsData();
+  return <BlogClient posts={posts} />;
 }
