@@ -29,31 +29,14 @@ export default function Footer() {
         
         {/* Brand - 3 cols */}
         <div className="lg:col-span-4 space-y-6">
-                    <Link href="/" id="footer-logo" className="flex items-center gap-2 group w-max">
-            <div className="relative w-8 h-8 flex items-center justify-center">
-              <img 
-                src="/logo.jpeg" 
-                alt="Growth Nest Logo" 
-                className="w-full h-full object-contain"
-                onError={(e) => {
-                  e.target.style.display = 'none';
-                  const fb = document.getElementById("footer-logo-fallback");
-                  if (fb) fb.classList.remove("hidden");
-                }}
-              />
-              <span 
-                id="footer-logo-fallback" 
-                className="absolute inset-0 rounded-lg flex items-center justify-center font-extrabold text-[10px] text-white hidden"
-                style={{ background: "linear-gradient(135deg, #2563eb, #06b6d4)" }}
-              >
-                GN
-              </span>
-            </div>
-                        <span className="font-bold text-sm uppercase tracking-[0.2em] text-slate-800">
-              Growth Nest
-            </span>
+          <Link href="/" id="footer-logo" className="inline-flex items-center group mb-6">
+            <img 
+              src="/Horizontal_logo.png" 
+              alt="Growth Nest" 
+              className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]" 
+            />
           </Link>
-                    <p className="body-sm text-xs leading-relaxed max-w-xs font-light text-text-secondary">
+          <p className="body-sm text-xs leading-relaxed max-w-xs font-light text-text-secondary">
             Growth Nest builds custom responsive web assets, technical SEO setups, and high-conversion Meta/Google paid campaigns for local businesses.
           </p>
           

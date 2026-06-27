@@ -25,30 +25,13 @@ export default function Navbar() {
         <Link 
           href="/" 
           id="nav-logo" 
-          className="flex items-center gap-2 group focus:outline-none"
+          className="flex items-center group focus:outline-none"
         >
-          <div className="relative w-8 h-8 flex items-center justify-center">
-                      <img 
-              src="/logo.jpeg" 
-              alt="Growth Nest Logo" 
-              className="w-full h-full object-contain group-hover:scale-[1.03] transition-transform duration-300"
-              onError={(e) => {
-                e.target.style.display = 'none';
-                const fb = document.getElementById("nav-logo-fallback");
-                if (fb) fb.classList.remove("hidden");
-              }}
-            />
-            <span 
-              id="nav-logo-fallback" 
-              className="absolute inset-0 rounded-lg flex items-center justify-center font-extrabold text-[10px] text-white group-hover:scale-[1.03] transition-transform duration-300 hidden"
-              style={{ background: "linear-gradient(135deg, #2563eb, #06b6d4)" }}
-            >
-              GN
-            </span>
-          </div>
-                    <span className="font-bold text-sm uppercase tracking-[0.2em] text-slate-900 group-hover:text-amber-500 transition-colors duration-300">
-            Growth Nest
-          </span>
+          <img 
+            src="/Horizontal_logo.png" 
+            alt="Growth Nest" 
+            className="h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]" 
+          />
         </Link>
 
         {/* Nav Links */}
