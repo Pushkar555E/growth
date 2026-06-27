@@ -57,7 +57,7 @@ export default async function BlogPostPage({ params }) {
           <div className="mb-12">
             <Link 
               href="/blog" 
-              className="inline-flex items-center text-xs font-semibold text-purple-400 hover:text-purple-300 mb-8 transition-colors"
+              className="inline-flex items-center text-xs font-semibold text-amber-400 hover:text-amber-300 mb-8 transition-colors"
             >
               <svg className="w-3.5 h-3.5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
@@ -77,7 +77,7 @@ export default async function BlogPostPage({ params }) {
 
           {/* Render parsed HTML content cleanly with custom styling */}
           <div 
-            className="prose prose-invert max-w-none text-sm md:text-base text-text-secondary leading-relaxed font-light space-y-6 [&>h3]:text-lg [&>h3]:font-bold [&>h3]:text-white [&>h3]:mt-10 [&>p]:leading-relaxed [&>ul]:list-disc [&>ul]:pl-6 [&>ul]:space-y-2 [&>ul]:text-text-secondary [&>ul_strong]:text-white [&>p_strong]:text-white [&>blockquote]:border-l-4 [&>blockquote]:border-purple-500 [&>blockquote]:pl-4 [&>blockquote]:italic"
+            className="prose prose-invert max-w-none text-sm md:text-base text-text-secondary leading-relaxed font-light space-y-6 [&>h3]:text-lg [&>h3]:font-bold [&>h3]:text-white [&>h3]:mt-10 [&>p]:leading-relaxed [&>ul]:list-disc [&>ul]:pl-6 [&>ul]:space-y-2 [&>ul]:text-text-secondary [&>ul_strong]:text-white [&>p_strong]:text-white [&>blockquote]:border-l-4 [&>blockquote]:border-amber-500 [&>blockquote]:pl-4 [&>blockquote]:italic"
             dangerouslySetInnerHTML={{ __html: htmlContent }}
           />
         </article>

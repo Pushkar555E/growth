@@ -46,7 +46,7 @@ export default function ServicesTeaser() {
         <div className="text-center mb-16">
           <span className="label mb-4 block">What We Offer</span>
           <h2 id="teaser-title" className="text-3xl md:text-5xl font-extrabold tracking-tight text-white">
-            Built for <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Absolute Conversion</span>
+            Built for <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-amber-400">Absolute Conversion</span>
           </h2>
           <p className="body-md mt-4 max-w-xl mx-auto font-light text-text-secondary">
             We don't use templates. We build custom-made lead generation assets that work.
@@ -77,7 +77,7 @@ export default function ServicesTeaser() {
                 <Link
                   href={svc.link}
                   id={`${svc.id}-link`}
-                  className="text-xs font-semibold text-purple-400 hover:text-purple-300 flex items-center gap-1 group/btn"
+                  className="text-xs font-semibold text-amber-400 hover:text-amber-300 flex items-center gap-1 group/btn"
                 >
                   Learn More
                   <svg

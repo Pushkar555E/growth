@@ -23,13 +23,13 @@ export default function IndustriesClient() {
       <MouseGlow />
 
       <main className="pt-32 pb-24 relative overflow-hidden min-h-screen">
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-blob bg-blob-cyan opacity-10 pointer-events-none" />
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-blob bg-blob-purple opacity-10 pointer-events-none" />
 
         <div className="container-tight relative z-10">
           <div className="text-center mb-20">
             <span className="label mb-4 block">Who We Serve</span>
             <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-6">
-              Industries We <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Scale Continuously</span>
+              Industries We <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-amber-400">Scale Continuously</span>
             </h1>
             <p className="body-md max-w-xl mx-auto font-light text-text-secondary">
               We build custom SEO and paid acquisition blueprints targeted to your industry's exact client profile.
@@ -57,7 +57,7 @@ export default function IndustriesClient() {
                   </div>
                   <div className="pt-4 border-t border-white/[0.02] flex justify-between items-center">
                     <span className="text-[10px] font-semibold text-text-tertiary uppercase tracking-wider">Estimated Impact</span>
-                    <span className="text-xs font-bold text-purple-400">{ind.leads}</span>
+                    <span className="text-xs font-bold text-amber-400">{ind.leads}</span>
                   </div>
                 </motion.div>
               );

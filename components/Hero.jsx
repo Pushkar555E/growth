@@ -34,16 +34,15 @@ export default function Hero() {
       <div className="absolute inset-0 hero-grid opacity-[0.2] pointer-events-none" />
 
       {/* Floating background gradient blobs */}
-      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blob bg-blob-purple opacity-20" />
-      <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-blob bg-blob-cyan opacity-15" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-blob bg-blob-purple opacity-20" />
 
       <div className="container-tight relative z-10 flex flex-col items-center text-center">
         {/* Badge */}
         <div ref={badgeRef} className="mb-8 opacity-0">
-          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[10px] font-semibold tracking-widest uppercase bg-purple-500/10 border border-purple-500/20 text-purple-300">
+          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[10px] font-semibold tracking-widest uppercase bg-amber-500/10 border border-amber-500/20 text-amber-300">
             <span className="relative flex h-1.5 w-1.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75" />
-              <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-purple-400" />
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75" />
+              <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-amber-400" />
             </span>
             Growth Blueprint V1.0
           </span>
@@ -56,7 +55,7 @@ export default function Hero() {
           className="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-white max-w-4xl mb-6 opacity-0 leading-[1.05]"
         >
           We don&apos;t run ads. <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-purple-300 to-cyan-400">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-amber-200 to-amber-500">
             We build businesses that customers can&apos;t ignore.
           </span>
         </h1>

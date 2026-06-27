@@ -30,7 +30,7 @@ export default function PricingClient() {
           <div className="text-center mb-16">
             <span className="label mb-4 block">Our Plans</span>
             <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-6">
-              Invest in <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Scalable Growth</span>
+              Invest in <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-amber-400">Scalable Growth</span>
             </h1>
             <p className="body-md max-w-xl mx-auto font-light text-text-secondary">
               No locked contracts. Cancel anytime. Choose the service you need to scale your traffic.
@@ -121,7 +121,7 @@ function WebsitePricingView() {
               <tr key={idx} className="border-b border-white/[0.01] hover:bg-white/[0.01] transition-colors duration-250">
                 <td className="p-5 font-bold text-sm text-text-primary">{item.service}</td>
                 <td className="p-5 text-xs text-text-secondary font-light">{item.type}</td>
-                <td className="p-5 font-bold text-sm text-purple-400 text-right">₹{item.price}</td>
+                <td className="p-5 font-bold text-sm text-amber-400 text-right">₹{item.price}</td>
               </tr>
             ))}
           </tbody>
@@ -140,7 +140,7 @@ function SocialPricingView() {
           key={pkg.name}
           className={`p-8 rounded-xl border transition-all duration-350 flex flex-col justify-between ${
             pkg.isPopular
-              ? "bg-white/[0.02] border-purple-500/30 shadow-[0_0_30px_rgba(168,85,247,0.1)]"
+              ? "bg-white/[0.02] border-amber-500/30 shadow-[0_0_30px_rgba(245,158,11,0.04)]"
               : "bg-white/[0.01] border-white/[0.03]"
           }`}
         >
@@ -159,7 +159,7 @@ function SocialPricingView() {
             <ul className="space-y-4 mb-8">
               {pkg.features.map((feature, fIdx) => (
                 <li key={fIdx} className="flex items-start text-xs text-text-secondary font-light leading-relaxed">
-                  <svg className="w-4.5 h-4.5 text-purple-400 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4.5 h-4.5 text-amber-400 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                   </svg>
                   {feature}
@@ -183,7 +183,7 @@ function SEOPricingView() {
           key={pkg.name}
           className={`p-8 rounded-xl border transition-all duration-350 flex flex-col justify-between ${
             pkg.isPopular
-              ? "bg-white/[0.02] border-purple-500/30 shadow-[0_0_30px_rgba(168,85,247,0.1)]"
+              ? "bg-white/[0.02] border-amber-500/30 shadow-[0_0_30px_rgba(245,158,11,0.04)]"
               : "bg-white/[0.01] border-white/[0.03]"
           }`}
         >
@@ -201,7 +201,7 @@ function SEOPricingView() {
             <ul className="space-y-4 mb-8">
               {pkg.features.map((feature, fIdx) => (
                 <li key={fIdx} className="flex items-start text-xs text-text-secondary font-light leading-relaxed">
-                  <svg className="w-4.5 h-4.5 text-purple-400 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4.5 h-4.5 text-amber-400 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                   </svg>
                   {feature}
@@ -234,7 +234,7 @@ function AdsPricingView() {
               <tr key={idx} className="border-b border-white/[0.01] hover:bg-white/[0.01] transition-colors duration-250">
                 <td className="p-5 font-bold text-sm text-text-primary whitespace-nowrap">{item.service}</td>
                 <td className="p-5 text-xs text-text-secondary max-w-sm leading-relaxed font-light">{item.details}</td>
-                <td className="p-5 font-bold text-sm text-purple-400 text-right whitespace-nowrap">₹{item.price}</td>
+                <td className="p-5 font-bold text-sm text-amber-400 text-right whitespace-nowrap">₹{item.price}</td>
               </tr>
             ))}
           </tbody>

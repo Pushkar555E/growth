@@ -28,7 +28,7 @@ export default function Footer() {
         {/* Brand */}
         <div className="space-y-4">
           <Link href="/" id="footer-logo" className="flex items-center gap-2 group">
-            <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500 to-cyan-400 flex items-center justify-center font-extrabold text-sm text-black">
+            <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center font-extrabold text-sm text-black">
               G
             </span>
             <span className="font-bold text-sm uppercase tracking-[0.2em] text-white">

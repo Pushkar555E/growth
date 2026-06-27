@@ -13,36 +13,36 @@ const steps = [
     title: "Discovery",
     subtitle: "Understanding Your Business",
     description: "Deep dive audit of your existing traffic, ranking, metrics, and competitors. We pinpoint specific opportunities.",
-    color: "from-purple-500 to-indigo-500",
-    glowColor: "rgba(124, 58, 237, 0.15)",
-    lineColor: "#8b5cf6",
+    color: "from-amber-500 to-amber-600",
+    glowColor: "rgba(245, 158, 11, 0.15)",
+    lineColor: "#f59e0b",
   },
   {
     id: 2,
     title: "Strategy",
     subtitle: "Creating The Blueprint",
     description: "A tailored design mock, keyword sheet, and content mapping strategy custom-made for your audience.",
-    color: "from-blue-500 to-cyan-500",
-    glowColor: "rgba(6, 182, 212, 0.15)",
-    lineColor: "#06b6d4",
+    color: "from-amber-500 to-amber-600",
+    glowColor: "rgba(245, 158, 11, 0.15)",
+    lineColor: "#f59e0b",
   },
   {
     id: 3,
     title: "Launch",
     subtitle: "Executing with Precision",
     description: "Deploying high speed clean-coded pages, target campaigns, pixel trackings, and full SEO setup.",
-    color: "from-cyan-500 to-emerald-500",
-    glowColor: "rgba(16, 185, 129, 0.15)",
-    lineColor: "#10b981",
+    color: "from-amber-500 to-amber-600",
+    glowColor: "rgba(245, 158, 11, 0.15)",
+    lineColor: "#f59e0b",
   },
   {
     id: 4,
     title: "Scale",
     subtitle: "Compounding Growth",
     description: "Ongoing monthly performance reports, split test optimization, and channel expansions.",
-    color: "from-emerald-500 to-purple-500",
-    glowColor: "rgba(168, 85, 247, 0.15)",
-    lineColor: "#a855f7",
+    color: "from-amber-500 to-amber-600",
+    glowColor: "rgba(245, 158, 11, 0.15)",
+    lineColor: "#f59e0b",
   },
 ];
 
@@ -59,26 +59,30 @@ export default function ProcessTimeline() {
         const lineFill = containerRef.current.querySelector(`.timeline-line-fill-${i}`);
         if (!lineFill) continue;
 
-        gsap.to(lineFill, {
-          scaleY: 1,
-          ease: "none",
-          scrollTrigger: {
-            trigger: lineFill,
-            start: "top 75%",
-            end: "bottom 55%",
-            scrub: true,
-          },
-        });
+        gsap.fromTo(
+          lineFill,
+          { scaleY: 0 },
+          {
+            scaleY: 1,
+            ease: "none",
+            scrollTrigger: {
+              trigger: stepEls[i],
+              start: "top 45%",
+              end: "bottom 45%",
+              scrub: true,
+            },
+          }
+        );
       }
 
-      // Auto-advance active tab
-      stepEls.forEach((el, i) => {
+      // Automatically change active step based on scroll trigger positions
+      stepEls.forEach((stepEl, idx) => {
         ScrollTrigger.create({
-          trigger: el,
-          start: "top 60%",
-          end: "bottom 60%",
-          onEnter: () => setActiveStep(i),
-          onEnterBack: () => setActiveStep(i),
+          trigger: stepEl,
+          start: "top 55%",
+          end: "bottom 55%",
+          onEnter: () => setActiveStep(idx),
+          onEnterBack: () => setActiveStep(idx),
         });
       });
     }, containerRef);
@@ -99,7 +103,7 @@ export default function ProcessTimeline() {
         <div className="text-center mb-20">
           <span className="label mb-4 block">Our Process</span>
           <h2 id="process-title" className="text-3xl md:text-5xl font-extrabold tracking-tight text-white">
-            Four Steps to <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Unstoppable Growth</span>
+            Four Steps to <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-amber-400">Unstoppable Growth</span>
           </h2>
           <p className="body-md mt-4 max-w-xl mx-auto font-light text-text-secondary">
             A transparent, technical-first framework that consistently scales local businesses.
@@ -148,12 +152,12 @@ export default function ProcessTimeline() {
                 <div className="pb-10 flex-1">
                   <div
                     className={`p-6 rounded-xl border transition-all duration-300 ${
-                      isActive ? "glass border-purple-500/20 bg-white/[0.01]" : "border-transparent hover:bg-white/[0.01]"
+                      isActive ? "glass border-amber-500/20 bg-white/[0.01]" : "border-transparent hover:bg-white/[0.01]"
                     }`}
                   >
                     <div className="flex flex-col md:flex-row md:items-center gap-2">
                       <h3 className="text-base font-bold text-white">{step.title}</h3>
-                      <span className="text-xs text-purple-400 font-semibold md:before:content-['•_'] md:before:mr-1">
+                      <span className="text-xs text-amber-400 font-semibold md:before:content-['•_'] md:before:mr-1">
                         {step.subtitle}
                       </span>
                     </div>

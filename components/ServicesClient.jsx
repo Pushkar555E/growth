@@ -100,7 +100,7 @@ function TiltCard({ service }) {
         <ul className="space-y-3 mb-8">
           {service.features.map((feature, idx) => (
             <li key={idx} className="flex items-center text-xs text-text-secondary font-light">
-              <svg className="w-4.5 h-4.5 text-purple-400 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4.5 h-4.5 text-amber-400 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
               </svg>
               {feature}
@@ -126,7 +126,7 @@ export default function ServicesClient() {
           <div className="text-center mb-20">
             <span className="label mb-4 block">What We Do</span>
             <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-6">
-              Our Premium <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Growth Services</span>
+              Our Premium <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-amber-400">Growth Services</span>
             </h1>
             <p className="body-md max-w-xl mx-auto font-light text-text-secondary">
               Custom-built lead generation assets and audience scaling campaigns mapped strictly to revenue.

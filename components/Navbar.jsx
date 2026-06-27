@@ -26,10 +26,10 @@ export default function Navbar() {
           id="nav-logo" 
           className="flex items-center gap-2 group focus:outline-none"
         >
-          <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500 to-cyan-400 flex items-center justify-center font-extrabold text-sm text-black group-hover:scale-[1.03] transition-transform duration-300">
+          <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center font-extrabold text-sm text-black group-hover:scale-[1.03] transition-transform duration-300">
             G
           </span>
-          <span className="font-bold text-sm uppercase tracking-[0.2em] text-white group-hover:text-purple-400 transition-colors duration-300">
+          <span className="font-bold text-sm uppercase tracking-[0.2em] text-white group-hover:text-amber-400 transition-colors duration-300">
             Growth
           </span>
         </Link>
@@ -44,7 +44,7 @@ export default function Navbar() {
                 id={link.id}
                 href={link.href}
                 className={`text-xs font-medium uppercase tracking-widest transition-colors duration-300 ${
-                  isActive ? "text-purple-400" : "text-text-secondary hover:text-text-primary"
+                  isActive ? "text-amber-400" : "text-text-secondary hover:text-text-primary"
                 }`}
               >
                 {link.label}

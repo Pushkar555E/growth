@@ -71,7 +71,7 @@ WhatsApp: ${formData.whatsapp}
           <div className="text-center mb-10">
             <span className="label mb-4 block">Limited Spots</span>
             <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-white mb-4 leading-tight">
-              Claim Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">FREE Business Growth Audit</span>
+              Claim Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-amber-400">FREE Business Growth Audit</span>
             </h1>
             <p className="text-xs text-text-secondary font-light">
               We will audit your speed, search ranking positions, and local ads and send you a customized blueprint.

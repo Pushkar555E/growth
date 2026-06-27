@@ -39,7 +39,7 @@ export default function FAQSection() {
         <div className="text-center mb-16">
           <span className="label mb-4 block">Help Center</span>
           <h2 id="faq-title" className="text-3xl md:text-5xl font-extrabold tracking-tight text-white">
-            Frequently Asked <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Questions</span>
+            Frequently Asked <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-amber-400">Questions</span>
           </h2>
         </div>
 
@@ -63,7 +63,7 @@ export default function FAQSection() {
                   </span>
                   <span className="ml-4 shrink-0">
                     <svg
-                      className={`w-4 h-4 text-purple-400 transform transition-transform duration-300 ${
+                      className={`w-4 h-4 text-amber-400 transform transition-transform duration-300 ${
                         isOpen ? "rotate-180" : ""
                       }`}
                       fill="none"

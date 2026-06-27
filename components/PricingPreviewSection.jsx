@@ -15,13 +15,13 @@ export default function PricingPreviewSection() {
       aria-labelledby="pricing-preview-title"
     >
       {/* Background Glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-purple-600/10 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-amber-600/5 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <span className="label mb-4 block">Social Media Teaser</span>
           <h2 id="pricing-preview-title" className="text-3xl md:text-5xl font-extrabold tracking-tight text-white mb-6">
-            Pricing that <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Scales</span>
+            Pricing that <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-amber-400">Scales</span>
           </h2>
           <p className="body-md mt-4 max-w-xl mx-auto font-light text-text-secondary">
             Transparent, zero-BS packages designed to turn your online presence into a revenue-generating machine.
@@ -39,7 +39,7 @@ export default function PricingPreviewSection() {
               whileHover={{ y: -4 }}
               className={`p-8 rounded-xl border transition-all duration-300 flex flex-col justify-between ${
                 pkg.isPopular 
-                  ? "bg-white/[0.02] border-purple-500/30 shadow-[0_0_30px_rgba(168,85,247,0.1)]" 
+                  ? "bg-white/[0.02] border-amber-500/30 shadow-[0_0_30px_rgba(245,158,11,0.04)]" 
                   : "bg-white/[0.01] border-white/[0.03] hover:border-white/[0.08]"
               }`}
             >
@@ -58,7 +58,7 @@ export default function PricingPreviewSection() {
                 <ul className="space-y-4 mb-8">
                   {pkg.features.slice(0, 4).map((feature, idx) => (
                     <li key={idx} className="flex items-center text-xs text-text-secondary font-light">
-                      <svg className="w-4.5 h-4.5 text-purple-400 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-4.5 h-4.5 text-amber-400 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7"></path>
                       </svg>
                       {feature}
@@ -81,7 +81,7 @@ export default function PricingPreviewSection() {
           <Link 
             href="/pricing" 
             id="preview-full-pricing-btn"
-            className="inline-flex items-center text-xs font-bold uppercase tracking-wider text-white hover:text-purple-400 transition-colors duration-300"
+            className="inline-flex items-center text-xs font-bold uppercase tracking-wider text-white hover:text-amber-400 transition-colors duration-300"
           >
             View Full Pricing & Add-ons
             <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
