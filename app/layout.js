@@ -69,7 +69,7 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body className="min-h-screen bg-[#030407] text-[#f1f5f9] font-sans antialiased overflow-x-hidden selection:bg-purple-500/30 selection:text-white">
+      <body className="min-h-screen bg-[#060814] text-white font-sans antialiased overflow-x-hidden selection:bg-amber-500/20 selection:text-white">
         {children}
       </body>
     </html>

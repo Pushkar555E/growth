@@ -35,7 +35,7 @@ const caseStudies = [
 export default function CaseStudiesSection() {
   return (
     <section 
-      className="py-24 bg-black text-white relative overflow-hidden" 
+      className="py-24 bg-bg-primary text-white relative overflow-hidden" 
       id="case-studies"
       aria-labelledby="case-studies-title"
     >

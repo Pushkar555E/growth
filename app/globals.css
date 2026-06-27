@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
-/* ── Custom Theme System (Obsidian & Amber Gold Palette) ─── */
+/* ── Custom Theme System (Midnight Navy & Amber Gold Palette) ─── */
 :root {
-  --color-bg-primary: #030304;
-  --color-bg-secondary: #08080a;
-  --color-bg-card: #0d0d0f;
+  --color-bg-primary: #060814;
+  --color-bg-secondary: #0b0e22;
+  --color-bg-card: #101430;
   --color-accent-amber: #f59e0b;
   --color-accent-bronze: #d97706;
   --color-accent-rose: #f59e0b; /* Map to Amber to keep backward compatibility */
   --color-text-primary: #ffffff;
-  --color-text-secondary: #a0a0a5;
-  --color-text-tertiary: #6c6c72;
+  --color-text-secondary: #a0a2b0;
+  --color-text-tertiary: #6c6f85;
   --color-border-subtle: rgba(255, 255, 255, 0.02);
   --color-border-hover: rgba(255, 255, 255, 0.05);
 }

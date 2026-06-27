@@ -23,7 +23,7 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/[0.02] bg-[#030407] py-16" aria-label="Agency Footer">
+    <footer className="border-t border-white/[0.02] bg-[#060814] py-16" aria-label="Agency Footer">
       <div className="container-tight grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
         {/* Brand */}
         <div className="space-y-4">

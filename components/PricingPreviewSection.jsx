@@ -10,7 +10,7 @@ export default function PricingPreviewSection() {
 
   return (
     <section 
-      className="py-24 bg-black text-white relative overflow-hidden" 
+      className="py-24 bg-bg-primary text-white relative overflow-hidden" 
       id="pricing-preview"
       aria-labelledby="pricing-preview-title"
     >
