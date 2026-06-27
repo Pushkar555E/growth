@@ -26,7 +26,7 @@ export default function Footer() {
   const pathname = usePathname();
 
   return (
-    <footer className="border-t border-white/[0.02] bg-[#0b0f19] py-16" aria-label="Agency Footer">
+    <footer className="border-t border-white/[0.02] bg-[#0f172a] py-16" aria-label="Agency Footer">
       <div className="container-tight grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
         {/* Brand */}
         <div className="space-y-4">
