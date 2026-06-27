@@ -1,4 +1,5 @@
 import "./globals.css";
+import Script from "next/script";
 
 export const metadata = {
   metadataBase: new URL("https://growthagency.com"),
@@ -70,6 +71,21 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className="min-h-screen bg-[#0f172a] text-white font-sans antialiased overflow-x-hidden selection:bg-amber-500/20 selection:text-white">
+        {/* Google Analytics Global Telemetry */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-MOCKTRACKER"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-MOCKTRACKER', {
+              page_path: window.location.pathname,
+            });
+          `}
+        </Script>
         {children}
       </body>
     </html>

@@ -6,6 +6,7 @@ import { CheckCircle2, Phone, Mail, Clock, Shield } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MouseGlow from "@/components/MouseGlow";
+import { trackFormSubmission, trackPhoneClick, trackEmailClick } from "@/lib/tracking";
 
 export default function ContactClient() {
   const [formData, setFormData] = useState({
@@ -50,12 +51,15 @@ Message: ${formData.message}
       const result = await response.json();
       if (result.success) {
         setSubmitted(true);
+        trackFormSubmission("audit_request_form", true, formData.business);
         setFormData({ name: "", email: "", business: "", whatsapp: "", message: "" });
       } else {
         setErrorMsg(result.message || "Something went wrong. Please try again.");
+        trackFormSubmission("audit_request_form", false, result.message || "API Error");
       }
     } catch (err) {
       setErrorMsg("Unable to connect to the server. Please check your internet connection.");
+      trackFormSubmission("audit_request_form", false, "Server connection failure");
     } finally {
       setIsSubmitting(false);
     }
@@ -217,7 +221,7 @@ Message: ${formData.message}
                   </div>
                   <div>
                     <span className="text-[10px] text-text-tertiary uppercase tracking-wider block mb-0.5">Email</span>
-                    <a href="mailto:hello@growthagency.in" className="text-xs text-white font-medium hover:text-amber-400 transition-colors">
+                    <a href="mailto:hello@growthagency.in" onClick={trackEmailClick} className="text-xs text-white font-medium hover:text-amber-400 transition-colors">
                       hello@growthagency.in
                     </a>
                   </div>
@@ -229,7 +233,7 @@ Message: ${formData.message}
                   </div>
                   <div>
                     <span className="text-[10px] text-text-tertiary uppercase tracking-wider block mb-0.5">Phone / WhatsApp</span>
-                    <a href="tel:+919876543210" className="text-xs text-white font-medium hover:text-amber-400 transition-colors">
+                    <a href="tel:+919876543210" onClick={trackPhoneClick} className="text-xs text-white font-medium hover:text-amber-400 transition-colors">
                       +91 98765 43210
                     </a>
                   </div>
