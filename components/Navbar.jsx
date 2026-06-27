@@ -21,19 +21,19 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 w-full z-50 border-b border-slate-200/70 bg-white/80 backdrop-blur-xl shadow-sm">
       <nav 
-        className="container-tight flex items-center justify-between py-4 min-h-[5rem]" 
+        className="container-tight flex items-center justify-between h-20 md:h-24" 
         aria-label="Global Navigation"
       >
         {/* Logo */}
         <Link 
           href="/" 
           id="nav-logo" 
-          className="flex items-center group focus:outline-none"
+          className="flex items-center group focus:outline-none shrink-0"
         >
           <img 
             src="/Horizontal_logo.png" 
             alt="Growth Nest" 
-            className="w-40 sm:w-52 md:w-64 h-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]" 
+            className="w-44 sm:w-52 md:w-60 h-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]" 
           />
         </Link>
 

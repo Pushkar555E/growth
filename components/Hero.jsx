@@ -29,7 +29,7 @@ export default function Hero() {
   return (
     <section
       ref={containerRef}
-      className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-gradient-to-br from-white via-slate-50 to-cyan-50/30"
+      className="relative min-h-screen flex items-center justify-center pt-32 overflow-hidden bg-gradient-to-br from-white via-slate-50 to-cyan-50/30"
       aria-labelledby="hero-title"
     >
       {/* Grid overlay background */}
