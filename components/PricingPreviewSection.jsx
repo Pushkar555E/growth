@@ -5,91 +5,89 @@ import Link from "next/link";
 import { pricingData } from "../lib/pricing";
 
 export default function PricingPreviewSection() {
-  // We are pulling the 3 social media packages for the home page teaser
   const packages = pricingData.socialMediaPackages;
 
   return (
-    <section className="py-24 bg-black text-white relative overflow-hidden">
+    <section 
+      className="py-24 bg-black text-white relative overflow-hidden" 
+      id="pricing-preview"
+      aria-labelledby="pricing-preview-title"
+    >
       {/* Background Glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-purple-600/20 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-purple-600/10 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold mb-6 tracking-tight"
-          >
-            Pricing that <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Scales</span>
-          </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-gray-400 text-lg max-w-2xl mx-auto"
-          >
+          <span className="label mb-4 block">Social Media Teaser</span>
+          <h2 id="pricing-preview-title" className="text-3xl md:text-5xl font-extrabold tracking-tight text-white mb-6">
+            Pricing that <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Scales</span>
+          </h2>
+          <p className="body-md mt-4 max-w-xl mx-auto font-light text-text-secondary">
             Transparent, zero-BS packages designed to turn your online presence into a revenue-generating machine.
-          </motion.p>
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {packages.map((pkg, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.15 }}
-              whileHover={{ y: -10 }}
-              className={`p-8 rounded-2xl backdrop-blur-sm border transition-all duration-300 ${
+              transition={{ delay: index * 0.1, duration: 0.4 }}
+              whileHover={{ y: -4 }}
+              className={`p-8 rounded-xl border transition-all duration-300 flex flex-col justify-between ${
                 pkg.isPopular 
-                  ? "bg-white/10 border-purple-500/50 shadow-[0_0_30px_rgba(168,85,247,0.2)]" 
-                  : "bg-white/5 border-white/10 hover:border-white/20"
+                  ? "bg-white/[0.02] border-purple-500/30 shadow-[0_0_30px_rgba(168,85,247,0.1)]" 
+                  : "bg-white/[0.01] border-white/[0.03] hover:border-white/[0.08]"
               }`}
             >
-              {pkg.isPopular && (
-                <div className="text-purple-400 text-sm font-semibold mb-4 tracking-wider uppercase">
-                  ⭐ Most Popular
+              <div>
+                {pkg.isPopular && (
+                  <div className="text-purple-400 text-[10px] font-semibold mb-4 tracking-widest uppercase">
+                    ⭐ Most Popular
+                  </div>
+                )}
+                <h3 className="text-xl font-bold text-white mb-2">{pkg.name}</h3>
+                <p className="text-xs text-text-secondary mb-6 h-10 font-light">{pkg.description}</p>
+                <div className="mb-8">
+                  <span className="text-3xl font-extrabold text-white">₹{pkg.price}</span>
+                  <span className="text-xs text-text-tertiary">/month</span>
                 </div>
-              )}
-              <h3 className="text-2xl font-bold mb-2">{pkg.name}</h3>
-              <p className="text-gray-400 mb-6 h-10">{pkg.description}</p>
-              <div className="mb-8">
-                <span className="text-4xl font-bold">₹{pkg.price}</span>
-                <span className="text-gray-500">/month</span>
+                <ul className="space-y-4 mb-8">
+                  {pkg.features.slice(0, 4).map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-xs text-text-secondary font-light">
+                      <svg className="w-4.5 h-4.5 text-purple-400 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <ul className="space-y-4 mb-8">
-                {pkg.features.slice(0, 4).map((feature, idx) => (
-                  <li key={idx} className="flex items-center text-gray-300">
-                    <svg className="w-5 h-5 text-blue-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
+              <Link 
+                href="/pricing"
+                id={`preview-pkg-btn-${pkg.name.toLowerCase()}`}
+                className="w-full btn-secondary !py-2.5 !text-xs font-semibold text-center"
+              >
+                Choose {pkg.name}
+              </Link>
             </motion.div>
           ))}
         </div>
 
-        <motion.div 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
+        <div className="text-center">
           <Link 
             href="/pricing" 
-            className="inline-flex items-center px-8 py-4 rounded-full bg-white text-black font-semibold hover:bg-gray-200 transition-colors"
+            id="preview-full-pricing-btn"
+            className="inline-flex items-center text-xs font-bold uppercase tracking-wider text-white hover:text-purple-400 transition-colors duration-300"
           >
             View Full Pricing & Add-ons
-            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
             </svg>
           </Link>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

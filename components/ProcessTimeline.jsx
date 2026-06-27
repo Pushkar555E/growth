@@ -14,7 +14,7 @@ const steps = [
     subtitle: "Understanding Your Business",
     description: "Deep dive audit of your existing traffic, ranking, metrics, and competitors. We pinpoint specific opportunities.",
     color: "from-purple-500 to-indigo-500",
-    glowColor: "rgba(124, 58, 237, 0.3)",
+    glowColor: "rgba(124, 58, 237, 0.15)",
     lineColor: "#8b5cf6",
   },
   {
@@ -23,7 +23,7 @@ const steps = [
     subtitle: "Creating The Blueprint",
     description: "A tailored design mock, keyword sheet, and content mapping strategy custom-made for your audience.",
     color: "from-blue-500 to-cyan-500",
-    glowColor: "rgba(6, 182, 212, 0.3)",
+    glowColor: "rgba(6, 182, 212, 0.15)",
     lineColor: "#06b6d4",
   },
   {
@@ -32,7 +32,7 @@ const steps = [
     subtitle: "Executing with Precision",
     description: "Deploying high speed clean-coded pages, target campaigns, pixel trackings, and full SEO setup.",
     color: "from-cyan-500 to-emerald-500",
-    glowColor: "rgba(16, 185, 129, 0.3)",
+    glowColor: "rgba(16, 185, 129, 0.15)",
     lineColor: "#10b981",
   },
   {
@@ -41,7 +41,7 @@ const steps = [
     subtitle: "Compounding Growth",
     description: "Ongoing monthly performance reports, split test optimization, and channel expansions.",
     color: "from-emerald-500 to-purple-500",
-    glowColor: "rgba(168, 85, 247, 0.3)",
+    glowColor: "rgba(168, 85, 247, 0.15)",
     lineColor: "#a855f7",
   },
 ];
@@ -64,8 +64,8 @@ export default function ProcessTimeline() {
           ease: "none",
           scrollTrigger: {
             trigger: lineFill,
-            start: "top 70%",
-            end: "bottom 50%",
+            start: "top 75%",
+            end: "bottom 55%",
             scrub: true,
           },
         });
@@ -75,8 +75,8 @@ export default function ProcessTimeline() {
       stepEls.forEach((el, i) => {
         ScrollTrigger.create({
           trigger: el,
-          start: "top 55%",
-          end: "bottom 55%",
+          start: "top 60%",
+          end: "bottom 60%",
           onEnter: () => setActiveStep(i),
           onEnterBack: () => setActiveStep(i),
         });
@@ -87,16 +87,21 @@ export default function ProcessTimeline() {
   }, []);
 
   return (
-    <section ref={containerRef} className="py-24 relative overflow-hidden" id="process">
-      <div className="absolute top-1/3 right-1/4 w-[300px] h-[300px] bg-blob bg-blob-purple opacity-10" />
+    <section 
+      ref={containerRef} 
+      className="py-24 relative overflow-hidden" 
+      id="process"
+      aria-labelledby="process-title"
+    >
+      <div className="absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-blob bg-blob-purple opacity-5 pointer-events-none" />
 
-      <div className="container-tight relative z-10 max-w-4xl">
+      <div className="container-tight relative z-10 max-w-3xl">
         <div className="text-center mb-20">
           <span className="label mb-4 block">Our Process</span>
-          <h2 className="heading-lg">
-            Four Steps to <span className="gradient-text">Unstoppable Growth</span>
+          <h2 id="process-title" className="text-3xl md:text-5xl font-extrabold tracking-tight text-white">
+            Four Steps to <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Unstoppable Growth</span>
           </h2>
-          <p className="body-lg mt-4 max-w-xl mx-auto">
+          <p className="body-md mt-4 max-w-xl mx-auto font-light text-text-secondary">
             A transparent, technical-first framework that consistently scales local businesses.
           </p>
         </div>
@@ -107,26 +112,27 @@ export default function ProcessTimeline() {
             return (
               <div
                 key={step.id}
-                className="timeline-step relative flex gap-6 md:gap-12 cursor-pointer group"
+                id={`timeline-step-${step.id}`}
+                className="timeline-step relative flex gap-6 md:gap-10 cursor-pointer group"
                 onClick={() => setActiveStep(idx)}
               >
                 {/* Visual Line and Circle */}
                 <div className="flex flex-col items-center shrink-0">
                   <motion.div
-                    animate={isActive ? { scale: 1.15 } : { scale: 1 }}
-                    className={`relative z-10 w-12 h-12 rounded-xl flex items-center justify-center font-bold text-lg transition-all duration-500 border ${
+                    animate={isActive ? { scale: 1.1 } : { scale: 1 }}
+                    className={`relative z-10 w-10 h-10 rounded-lg flex items-center justify-center font-bold text-sm transition-all duration-300 border ${
                       isActive
-                        ? `bg-gradient-to-br ${step.color} border-transparent text-white`
-                        : "bg-bg-card border-border-default text-text-tertiary"
+                        ? `bg-gradient-to-br ${step.color} border-transparent text-black`
+                        : "bg-bg-card border-white/[0.03] text-text-tertiary group-hover:border-white/[0.08]"
                     }`}
-                    style={isActive ? { boxShadow: `0 0 25px ${step.glowColor}` } : {}}
+                    style={isActive ? { boxShadow: `0 0 20px ${step.glowColor}` } : {}}
                   >
                     {step.id}
                   </motion.div>
 
                   {idx < steps.length - 1 && (
-                    <div className="relative w-[2px] flex-1 min-h-[80px]">
-                      <div className="absolute inset-0 bg-border-default" />
+                    <div className="relative w-[1px] flex-1 min-h-[60px]">
+                      <div className="absolute inset-0 bg-white/[0.03]" />
                       <div
                         className={`timeline-line-fill-${idx} absolute inset-0 origin-top`}
                         style={{
@@ -139,15 +145,15 @@ export default function ProcessTimeline() {
                 </div>
 
                 {/* Content */}
-                <div className="pb-14 flex-1">
+                <div className="pb-10 flex-1">
                   <div
-                    className={`p-6 rounded-2xl border transition-all duration-500 ${
-                      isActive ? "glass border-accent-400/30" : "border-transparent hover:bg-white/[0.01]"
+                    className={`p-6 rounded-xl border transition-all duration-300 ${
+                      isActive ? "glass border-purple-500/20 bg-white/[0.01]" : "border-transparent hover:bg-white/[0.01]"
                     }`}
                   >
-                    <div className="flex flex-col md:flex-row md:items-center gap-2 mb-2">
-                      <h3 className="heading-sm text-text-primary">{step.title}</h3>
-                      <span className="text-xs text-accent-300 font-semibold md:before:content-['•_'] md:before:mr-1">
+                    <div className="flex flex-col md:flex-row md:items-center gap-2">
+                      <h3 className="text-base font-bold text-white">{step.title}</h3>
+                      <span className="text-xs text-purple-400 font-semibold md:before:content-['•_'] md:before:mr-1">
                         {step.subtitle}
                       </span>
                     </div>
@@ -158,8 +164,8 @@ export default function ProcessTimeline() {
                           initial={{ opacity: 0, height: 0 }}
                           animate={{ opacity: 1, height: "auto" }}
                           exit={{ opacity: 0, height: 0 }}
-                          transition={{ duration: 0.35 }}
-                          className="body-sm text-text-secondary leading-relaxed mt-2"
+                          transition={{ duration: 0.25 }}
+                          className="text-xs md:text-sm text-text-secondary leading-relaxed mt-3 font-light"
                         >
                           {step.description}
                         </motion.p>

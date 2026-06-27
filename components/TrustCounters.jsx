@@ -7,10 +7,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const stats = [
-  { value: 50, suffix: "+", label: "Campaigns Launched", icon: "🚀" },
-  { value: 15, suffix: "+", label: "Industries Served", icon: "🏢" },
-  { value: 500, suffix: "k+", label: "Ad Spend Managed ($)", icon: "💰" },
-  { value: 98, suffix: "%", label: "Client Retention", icon: "🤝" },
+  { id: "counter-campaigns", value: 50, suffix: "+", label: "Campaigns Launched", icon: "🚀" },
+  { id: "counter-industries", value: 15, suffix: "+", label: "Industries Served", icon: "🏢" },
+  { id: "counter-adspend", value: 500, suffix: "k+", label: "Ad Spend Managed ($)", icon: "💰" },
+  { id: "counter-retention", value: 98, suffix: "%", label: "Client Retention", icon: "🤝" },
 ];
 
 export default function TrustCounters() {
@@ -27,16 +27,16 @@ export default function TrustCounters() {
         // Setup scroll entrance
         gsap.fromTo(
           card,
-          { opacity: 0, y: 30 },
+          { opacity: 0, y: 20 },
           {
             opacity: 1,
             y: 0,
-            duration: 0.6,
-            delay: i * 0.12,
+            duration: 0.5,
+            delay: i * 0.1,
             ease: "power3.out",
             scrollTrigger: {
               trigger: card,
-              start: "top 85%",
+              start: "top 88%",
               once: true,
             },
           }
@@ -46,11 +46,11 @@ export default function TrustCounters() {
         const countObj = { val: 0 };
         gsap.to(countObj, {
           val: targetValue,
-          duration: 2,
-          ease: "power2.out",
+          duration: 1.8,
+          ease: "power3.out",
           scrollTrigger: {
             trigger: card,
-            start: "top 80%",
+            start: "top 88%",
             once: true,
           },
           onUpdate: () => {
@@ -66,30 +66,38 @@ export default function TrustCounters() {
   }, []);
 
   return (
-    <section ref={containerRef} className="py-20 overflow-hidden" id="trust-stats">
-      <div className="section-divider mb-16" />
+    <section 
+      ref={containerRef} 
+      className="py-16 overflow-hidden" 
+      id="trust-stats"
+      aria-label="Key Performance Indicators"
+    >
+      <div className="section-divider mb-12" />
       <div className="container-tight">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
           {stats.map((stat) => (
             <div
-              key={stat.label}
-              className="counter-card glass group card-hover flex flex-col items-center text-center p-6 lg:p-8 opacity-0"
+              key={stat.id}
+              id={stat.id}
+              className="counter-card glass p-8 flex flex-col items-center text-center opacity-0 hover:bg-white/[0.02] hover:border-white/[0.06] transition-all duration-300"
             >
-              <span className="text-3xl mb-4 block group-hover:scale-110 transition-transform duration-300">
+              <span className="text-2xl mb-4" role="img" aria-label={stat.label}>
                 {stat.icon}
               </span>
-              <div className="heading-lg gradient-text mb-2 font-extrabold tracking-tight">
+              <div className="text-3xl md:text-4xl font-extrabold tracking-tight text-white mb-2">
                 <span className="counter-number" data-target={stat.value}>
                   0
                 </span>
                 {stat.suffix}
               </div>
-              <p className="body-sm text-text-tertiary">{stat.label}</p>
+              <p className="text-xs font-semibold text-text-tertiary uppercase tracking-wider">
+                {stat.label}
+              </p>
             </div>
           ))}
         </div>
       </div>
-      <div className="section-divider mt-16" />
+      <div className="section-divider mt-12" />
     </section>
   );
 }

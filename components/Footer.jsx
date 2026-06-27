@@ -4,54 +4,55 @@ import Link from "next/link";
 
 const footerLinks = {
   Services: [
-    { label: "Website Development", href: "/services" },
-    { label: "Website SEO", href: "/services" },
-    { label: "Social Media Management", href: "/services" },
-    { label: "Paid Advertising", href: "/services" },
+    { id: "footer-link-webdev", label: "Website Development", href: "/services" },
+    { id: "footer-link-seo", label: "Website SEO", href: "/services" },
+    { id: "footer-link-social", label: "Social Media Management", href: "/services" },
+    { id: "footer-link-ads", label: "Paid Advertising", href: "/services" },
   ],
   Company: [
-    { label: "About Us", href: "/about" },
-    { label: "Pricing", href: "/pricing" },
-    { label: "Industries", href: "/industries" },
-    { label: "Contact Us", href: "/contact" },
+    { id: "footer-link-about", label: "About Us", href: "/about" },
+    { id: "footer-link-pricing", label: "Pricing", href: "/pricing" },
+    { id: "footer-link-industries", label: "Industries", href: "/industries" },
+    { id: "footer-link-contact", label: "Contact Us", href: "/contact" },
   ],
   Legal: [
-    { label: "Privacy Policy", href: "#" },
-    { label: "Terms of Service", href: "#" },
+    { id: "footer-link-privacy", label: "Privacy Policy", href: "#" },
+    { id: "footer-link-terms", label: "Terms of Service", href: "#" },
   ],
 };
 
 export default function Footer() {
   return (
-    <footer className="border-t border-border-default bg-bg-secondary py-16">
+    <footer className="border-t border-white/[0.02] bg-[#030407] py-16" aria-label="Agency Footer">
       <div className="container-tight grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
         {/* Brand */}
         <div className="space-y-4">
-          <Link href="/" className="flex items-center gap-2 group">
-            <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-accent-400 to-cyan-400 flex items-center justify-center font-bold text-white shadow-glow-sm group-hover:scale-105 transition-transform duration-300">
+          <Link href="/" id="footer-logo" className="flex items-center gap-2 group">
+            <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500 to-cyan-400 flex items-center justify-center font-extrabold text-sm text-black">
               G
             </span>
-            <span className="font-extrabold text-xl tracking-tight text-white group-hover:text-accent-300 transition-colors">
-              GROWTH
+            <span className="font-bold text-sm uppercase tracking-[0.2em] text-white">
+              Growth
             </span>
           </Link>
-          <p className="body-sm">
-            We don't run ads. We build businesses that customers can't ignore. Transparent, data-driven growth.
+          <p className="body-sm text-xs leading-relaxed max-w-xs">
+            We build custom responsive web assets, technical SEO setups, and high conversion Meta/Google paid pipelines.
           </p>
         </div>
 
         {/* Links */}
         {Object.entries(footerLinks).map(([title, links]) => (
           <div key={title} className="space-y-4">
-            <h4 className="text-sm font-semibold tracking-wider uppercase text-text-primary">
+            <h4 className="text-xs font-semibold tracking-widest uppercase text-text-primary">
               {title}
             </h4>
-            <ul className="space-y-2">
+            <ul className="space-y-2.5">
               {links.map((link) => (
-                <li key={link.label}>
+                <li key={link.id}>
                   <Link
+                    id={link.id}
                     href={link.href}
-                    className="text-sm text-text-secondary hover:text-text-primary transition-colors"
+                    className="text-xs text-text-secondary hover:text-text-primary transition-colors duration-200"
                   >
                     {link.label}
                   </Link>
@@ -61,12 +62,13 @@ export default function Footer() {
           </div>
         ))}
       </div>
-      <div className="container-tight border-t border-border-default mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-        <p className="body-sm text-xs">
+
+      <div className="container-tight border-t border-white/[0.02] mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p className="body-sm text-xs text-text-tertiary">
           © {new Date().getFullYear()} Growth Agency. All rights reserved.
         </p>
-        <p className="body-sm text-xs">
-          Built with speed, accuracy, and precision.
+        <p className="body-sm text-xs text-text-tertiary">
+          Engineered for high conversion.
         </p>
       </div>
     </footer>

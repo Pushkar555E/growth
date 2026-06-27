@@ -30,12 +30,16 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="py-24 bg-bg-primary" id="faq">
-      <div className="container-tight max-w-3xl">
+    <section 
+      className="py-24 bg-[#030407]" 
+      id="faq"
+      aria-labelledby="faq-title"
+    >
+      <div className="container-tight max-w-2xl">
         <div className="text-center mb-16">
           <span className="label mb-4 block">Help Center</span>
-          <h2 className="heading-lg">
-            Frequently Asked <span className="gradient-text">Questions</span>
+          <h2 id="faq-title" className="text-3xl md:text-5xl font-extrabold tracking-tight text-white">
+            Frequently Asked <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Questions</span>
           </h2>
         </div>
 
@@ -43,24 +47,30 @@ export default function FAQSection() {
           {faqs.map((faq, idx) => {
             const isOpen = openIdx === idx;
             return (
-              <div key={idx} className="glass border border-border-default overflow-hidden">
+              <div 
+                key={idx} 
+                className="glass border-white/[0.02] bg-white/[0.01] hover:bg-white/[0.02] overflow-hidden transition-all duration-300"
+              >
                 <button
+                  id={`faq-btn-${idx}`}
                   className="w-full flex justify-between items-center p-6 text-left focus:outline-none"
                   onClick={() => toggle(idx)}
+                  aria-expanded={isOpen}
+                  aria-controls={`faq-panel-${idx}`}
                 >
-                  <span className="font-semibold text-text-primary text-base md:text-lg">
+                  <span className="font-semibold text-white text-sm md:text-base">
                     {faq.q}
                   </span>
                   <span className="ml-4 shrink-0">
                     <svg
-                      className={`w-5 h-5 text-accent-300 transform transition-transform duration-300 ${
+                      className={`w-4 h-4 text-purple-400 transform transition-transform duration-300 ${
                         isOpen ? "rotate-180" : ""
                       }`}
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
                     >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M19 9l-7 7-7-7" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
                     </svg>
                   </span>
                 </button>
@@ -68,12 +78,13 @@ export default function FAQSection() {
                 <AnimatePresence initial={false}>
                   {isOpen && (
                     <motion.div
+                      id={`faq-panel-${idx}`}
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                      transition={{ duration: 0.25, ease: "easeInOut" }}
                     >
-                      <div className="px-6 pb-6 text-text-secondary text-sm md:text-base leading-relaxed border-t border-border-default/50 pt-4">
+                      <div className="px-6 pb-6 text-text-secondary text-xs md:text-sm leading-relaxed border-t border-white/[0.02] pt-4 font-light">
                         {faq.a}
                       </div>
                     </motion.div>

@@ -4,25 +4,32 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const navLinks = [
-  { label: "Services", href: "/services" },
-  { label: "Industries", href: "/industries" },
-  { label: "Pricing", href: "/pricing" },
-  { label: "About", href: "/about" },
+  { id: "nav-services", label: "Services", href: "/services" },
+  { id: "nav-industries", label: "Industries", href: "/industries" },
+  { id: "nav-pricing", label: "Pricing", href: "/pricing" },
+  { id: "nav-about", label: "About", href: "/about" },
 ];
 
 export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 border-b border-border-default bg-bg-primary/80 backdrop-blur-md">
-      <div className="container-tight flex items-center justify-between h-16 py-4">
+    <header className="fixed top-0 left-0 w-full z-50 border-b border-white/[0.02] bg-[#030407]/70 backdrop-blur-xl">
+      <nav 
+        className="container-tight flex items-center justify-between h-16" 
+        aria-label="Global Navigation"
+      >
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 group">
-          <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-accent-400 to-cyan-400 flex items-center justify-center font-bold text-white shadow-glow-sm group-hover:scale-105 transition-transform duration-300">
+        <Link 
+          href="/" 
+          id="nav-logo" 
+          className="flex items-center gap-2 group focus:outline-none"
+        >
+          <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500 to-cyan-400 flex items-center justify-center font-extrabold text-sm text-black group-hover:scale-[1.03] transition-transform duration-300">
             G
           </span>
-          <span className="font-extrabold text-xl tracking-tight text-white group-hover:text-accent-300 transition-colors">
-            GROWTH
+          <span className="font-bold text-sm uppercase tracking-[0.2em] text-white group-hover:text-purple-400 transition-colors duration-300">
+            Growth
           </span>
         </Link>
 
@@ -32,10 +39,11 @@ export default function Navbar() {
             const isActive = pathname === link.href;
             return (
               <Link
-                key={link.label}
+                key={link.id}
+                id={link.id}
                 href={link.href}
-                className={`text-sm font-semibold transition-colors duration-300 ${
-                  isActive ? "text-accent-300" : "text-text-secondary hover:text-text-primary"
+                className={`text-xs font-medium uppercase tracking-widest transition-colors duration-300 ${
+                  isActive ? "text-purple-400" : "text-text-secondary hover:text-text-primary"
                 }`}
               >
                 {link.label}
@@ -46,11 +54,15 @@ export default function Navbar() {
 
         {/* CTA */}
         <div className="flex items-center gap-4">
-          <Link href="/contact" className="btn-primary !px-5 !py-2 !text-sm">
+          <Link 
+            href="/contact" 
+            id="nav-cta-audit" 
+            className="btn-primary !px-4 !py-1.5 !text-xs !rounded-md uppercase tracking-wider font-semibold"
+          >
             Free Audit
           </Link>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 }
