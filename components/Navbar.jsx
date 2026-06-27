@@ -18,7 +18,7 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 w-full z-50 border-b border-slate-200/70 bg-white/80 backdrop-blur-xl shadow-sm">
       <nav 
-        className="container-tight flex items-center justify-between h-16" 
+        className="container-tight flex items-center justify-between h-20" 
         aria-label="Global Navigation"
       >
         {/* Logo */}
@@ -30,7 +30,7 @@ export default function Navbar() {
           <img 
             src="/Horizontal_logo.png" 
             alt="Growth Nest" 
-            className="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]" 
+            className="h-12 sm:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]" 
           />
         </Link>
 
