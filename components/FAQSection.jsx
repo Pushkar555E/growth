@@ -31,7 +31,7 @@ export default function FAQSection() {
 
   return (
     <section 
-      className="py-24 bg-[#060814]" 
+      className="py-24 bg-[#0b0f19]" 
       id="faq"
       aria-labelledby="faq-title"
     >

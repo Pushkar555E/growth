@@ -15,7 +15,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 border-b border-white/[0.02] bg-[#060814]/70 backdrop-blur-xl">
+    <header className="fixed top-0 left-0 w-full z-50 border-b border-white/[0.02] bg-[#0b0f19]/70 backdrop-blur-xl">
       <nav 
         className="container-tight flex items-center justify-between h-16" 
         aria-label="Global Navigation"
