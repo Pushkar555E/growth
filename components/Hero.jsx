@@ -44,7 +44,7 @@ export default function Hero() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75" />
               <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-amber-400" />
             </span>
-            Growth Blueprint V1.0
+            FOR BUSINESSES READY TO GROW
           </span>
         </div>
 
@@ -54,15 +54,15 @@ export default function Hero() {
           id="hero-title" 
           className="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-white max-w-4xl mb-6 opacity-0 leading-[1.05]"
         >
-          We don&apos;t run ads. <br />
+          Less Guesswork. <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-amber-200 to-amber-500">
-            We build businesses that customers can&apos;t ignore.
+            More Growth.
           </span>
         </h1>
 
         {/* Description */}
         <p ref={descRef} className="text-base sm:text-lg md:text-xl text-text-secondary max-w-2xl mb-12 opacity-0 leading-relaxed font-light">
-          Premium development, technical SEO, and conversion optimization built for high-growth businesses. No fluff, just results.
+          We help local businesses attract the right audience, capture better leads, and scale with confidence.
         </p>
 
         {/* CTA Actions */}
@@ -72,17 +72,17 @@ export default function Hero() {
             id="hero-btn-primary" 
             className="btn-primary text-sm px-6 py-3.5"
           >
-            Book Free Growth Audit
+            Book a Strategy Call
             <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </Link>
           <a 
-            href="#process" 
+            href="#case-studies" 
             id="hero-btn-secondary" 
             className="btn-secondary text-sm px-6 py-3.5"
           >
-            Our Process
+            View Our Work
           </a>
         </div>
       </div>
