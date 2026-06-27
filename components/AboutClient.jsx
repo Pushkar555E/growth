@@ -1,9 +1,12 @@
 "use client";
 
+import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MouseGlow from "@/components/MouseGlow";
+import { ShieldCheck, Flame, Cpu, ArrowRight } from "lucide-react";
 
 const workflowSteps = [
   { step: "01", title: "Free Consultation", desc: "Define business scale, client goals, and core target numbers." },
@@ -19,9 +22,22 @@ const workflowSteps = [
   { step: "11", title: "Support & Maintenance", desc: "Monthly checks to maintain Google speed score and backups." },
 ];
 
-const roadmapItems = [
-  { time: "Q3 2026", title: "AI Lead Automations", desc: "Deploying automated custom-trained lead responses and chatbots to qualify client bookings automatically." },
-  { time: "Q4 2026", title: "Custom Growth Dashboard", desc: "Real-time client analytics platform so you can track your SEO rankings, ad spend, and leads in a clean custom SaaS dashboard." },
+const values = [
+  {
+    icon: ShieldCheck,
+    title: "Zero Fake Reports",
+    desc: "We don't count vanity impressions. We report on conversions, inbound call loops, and cash outcomes."
+  },
+  {
+    icon: Cpu,
+    title: "Performance Engineering",
+    desc: "No slow page builders. We code from scratch using lightweight React assets to load under 0.5 seconds."
+  },
+  {
+    icon: Flame,
+    title: "Laser Focus",
+    desc: "We only work with local service businesses where we are 100% confident we can deliver qualified leads."
+  }
 ];
 
 export default function AboutClient() {
@@ -30,23 +46,65 @@ export default function AboutClient() {
       <Navbar />
       <MouseGlow />
 
-      <main className="pt-32 pb-24 relative overflow-hidden min-h-screen">
-        <div className="absolute top-1/4 left-1/4 w-[600px] h-[300px] bg-blob bg-blob-purple opacity-10 pointer-events-none" />
+      <main className="pt-32 pb-24 relative overflow-hidden min-h-screen bg-bg-primary text-white">
+        <div className="absolute top-1/4 left-1/4 w-[600px] h-[300px] bg-amber-500/5 blur-[120px] rounded-full pointer-events-none" />
 
         <div className="container-tight relative z-10">
-          <div className="text-center mb-20">
-            <span className="label mb-4 block">About Us</span>
-            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-6">
-              Our Precise <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Client Blueprint</span>
+          
+          {/* Hero Story */}
+          <div className="max-w-3xl mb-24">
+            <span className="label mb-4 block">Our Story</span>
+            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-8">
+              We treat marketing like <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-amber-400">performance engineering.</span>
             </h1>
-            <p className="body-md max-w-xl mx-auto font-light text-text-secondary">
-              We treat local business marketing like engineering. Here is our exact 11-step workflow from audit to ongoing split optimization.
+            <p className="body-md text-text-secondary leading-relaxed font-light mb-6">
+              Founded on a simple realization: Most agencies sell visual vanity templates and generic traffic packages, while businesses need bookings and revenue.
             </p>
+            <p className="body-md text-text-secondary leading-relaxed font-light">
+              We stripped away the fluff to build Growth Agency—an engineering-first marketing team focusing on custom Next.js web development, local maps SEO, and high-ROAS paid campaign configurations.
+            </p>
+          </div>
+
+          {/* Stats Bar */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-8 rounded-xl bg-white/[0.01] border border-white/[0.03] mb-24 text-center">
+            <div>
+              <span className="text-3xl font-extrabold text-amber-400 block mb-1">50+</span>
+              <span className="text-[10px] text-text-secondary uppercase tracking-wider font-light">Successful Campaigns</span>
+            </div>
+            <div>
+              <span className="text-3xl font-extrabold text-amber-400 block mb-1">15+</span>
+              <span className="text-[10px] text-text-secondary uppercase tracking-wider font-light">Industries Serviced</span>
+            </div>
+            <div>
+              <span className="text-3xl font-extrabold text-amber-400 block mb-1">$500k+</span>
+              <span className="text-[10px] text-text-secondary uppercase tracking-wider font-light">Ad Spend Managed</span>
+            </div>
+          </div>
+
+          {/* Core Values */}
+          <div className="mb-28">
+            <h2 className="text-xs font-semibold uppercase tracking-widest text-amber-400 mb-12 text-center">Our Core Pillars</h2>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              {values.map((val, idx) => {
+                const Icon = val.icon;
+                return (
+                  <div key={idx} className="glass p-8 border-white/[0.02] flex flex-col justify-between hover:bg-white/[0.02] hover:border-white/[0.06] transition-all duration-300">
+                    <div>
+                      <div className="mb-6 p-2 bg-white/[0.02] border border-white/[0.04] rounded-lg inline-block">
+                        <Icon className="w-5 h-5 text-amber-400" />
+                      </div>
+                      <h3 className="text-base font-bold text-white mb-3">{val.title}</h3>
+                      <p className="text-xs text-text-secondary leading-relaxed font-light">{val.desc}</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
 
           {/* 11 Step Workflow Section */}
           <div className="mb-28">
-            <h2 className="text-2xl md:text-3xl font-bold mb-12 text-center text-white">11-Step Client Workflow</h2>
+            <h2 className="text-xs font-semibold uppercase tracking-widest text-amber-400 mb-12 text-center">Our 11-Step Client Workflow</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {workflowSteps.map((ws, idx) => (
                 <motion.div
@@ -57,7 +115,7 @@ export default function AboutClient() {
                   transition={{ delay: idx * 0.04 }}
                   className="glass p-6 bg-bg-card/30 border border-white/[0.02] hover:border-white/[0.08] transition-all duration-300"
                 >
-                  <span className="text-2xl font-extrabold text-purple-400/40 mb-3 block">{ws.step}</span>
+                  <span className="text-2xl font-extrabold text-amber-400/30 mb-3 block">{ws.step}</span>
                   <h3 className="text-base font-bold text-white mb-2">{ws.title}</h3>
                   <p className="text-xs text-text-secondary leading-relaxed font-light">{ws.desc}</p>
                 </motion.div>
@@ -65,29 +123,23 @@ export default function AboutClient() {
             </div>
           </div>
 
-          {/* Agency Roadmap Section */}
-          <div>
-            <h2 className="text-2xl md:text-3xl font-bold mb-12 text-center text-white">Agency Future Roadmap</h2>
-            <div className="max-w-2xl mx-auto space-y-8 relative before:absolute before:inset-y-0 before:left-8 before:w-[1px] before:bg-white/[0.03]">
-              {roadmapItems.map((item, idx) => (
-                <motion.div
-                  key={item.time}
-                  initial={{ opacity: 0, x: -10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.1, duration: 0.3 }}
-                  className="relative pl-16"
-                >
-                  {/* Circle Indicator */}
-                  <div className="absolute left-[29px] top-2 w-2.5 h-2.5 rounded-full bg-purple-400 border-2 border-[#030407] shadow-glow-sm" />
-
-                  <span className="text-[10px] font-bold text-purple-400 tracking-wider block mb-1 uppercase">{item.time}</span>
-                  <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
-                  <p className="text-xs text-text-secondary leading-relaxed font-light">{item.desc}</p>
-                </motion.div>
-              ))}
+          {/* CTA */}
+          <div className="text-center bg-white/[0.01] border border-white/[0.03] p-12 md:p-16 rounded-2xl relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-b from-amber-500/5 to-transparent pointer-events-none" />
+            <h2 className="text-2xl md:text-4xl font-extrabold tracking-tight text-white mb-6">
+              Partner with execution leads.
+            </h2>
+            <p className="text-xs sm:text-sm text-text-secondary max-w-md mx-auto mb-8 font-light leading-relaxed">
+              Skip the sales reps. Speak directly with the developers and campaigns engineers who manage your search rankings and lead spend.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link href="/contact" className="btn-primary">Book a Strategy Call</Link>
+              <Link href="/case-studies" className="btn-secondary flex items-center gap-1">
+                View Case Studies <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
             </div>
           </div>
+
         </div>
       </main>
 

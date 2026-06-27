@@ -1,10 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const caseStudies = [
   {
     id: "case-restaurant",
+    slug: "local-restaurant",
     title: "Local Restaurant",
     sub: "Social Media & SEO",
     metric1: { name: "Weekly Bookings", value: "+320%", pct: 85 },
@@ -14,6 +16,7 @@ const caseStudies = [
   },
   {
     id: "case-clinic",
+    slug: "diagnostic-clinic",
     title: "Diagnostic Clinic",
     sub: "Technical SEO & GBP",
     metric1: { name: "Organic Search Calls", value: "+210%", pct: 68 },
@@ -23,6 +26,7 @@ const caseStudies = [
   },
   {
     id: "case-gym",
+    slug: "premium-gym",
     title: "Premium Gym",
     sub: "Meta Ads & Funnels",
     metric1: { name: "Lead Cost Cut", value: "-45%", pct: 90 },
@@ -102,7 +106,7 @@ export default function CaseStudiesSection() {
                 </div>
 
                 {/* Horizontal Bar Chart 3 */}
-                <div>
+                <div className="mb-6">
                   <div className="flex justify-between text-xs mb-1.5 font-medium">
                     <span className="text-text-secondary">{study.metric3.name}</span>
                     <span className="text-white font-bold">{study.metric3.value}</span>
@@ -117,6 +121,23 @@ export default function CaseStudiesSection() {
                     />
                   </div>
                 </div>
+
+                {/* CTA Link */}
+                <Link
+                  href={`/case-studies/${study.slug}`}
+                  id={`case-btn-${study.slug}`}
+                  className="mt-8 text-xs font-semibold text-amber-400 hover:text-amber-300 flex items-center gap-1 group/btn"
+                >
+                  Read Case Study
+                  <svg
+                    className="w-3.5 h-3.5 transform group-hover/btn:translate-x-1 transition-transform duration-300"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
               </div>
             </motion.div>
           ))}
