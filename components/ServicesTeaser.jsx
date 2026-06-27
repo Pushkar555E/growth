@@ -10,28 +10,28 @@ const services = [
     title: "Website Development",
     desc: "Speed-optimized, high-converting, clean-coded custom sites to capture and turn traffic into clients.",
     icon: Monitor,
-    link: "/services",
+    link: "/services/web-development",
   },
   {
     id: "teaser-seo",
     title: "Website SEO",
     desc: "Top ranks on Google Search & Map Pack to make your business the default local option.",
     icon: Search,
-    link: "/services",
+    link: "/services/seo",
   },
   {
     id: "teaser-social",
     title: "Social Media Management",
     desc: "A consistent content calendar, Reels, strategy, and custom design templates to build absolute authority.",
     icon: Smartphone,
-    link: "/services",
+    link: "/services/social-media",
   },
   {
     id: "teaser-ads",
     title: "Paid Advertising",
     desc: "High ROAS Meta & Google ads optimized with precise pixels and target audience definitions.",
     icon: Zap,
-    link: "/services",
+    link: "/services/paid-advertising",
   },
 ];
 

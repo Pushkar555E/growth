@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import { Monitor, Search, Smartphone, Zap } from "lucide-react";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MouseGlow from "@/components/MouseGlow";
@@ -10,6 +11,7 @@ import MouseGlow from "@/components/MouseGlow";
 const services = [
   {
     id: "service-webdev",
+    slug: "web-development",
     title: "Website Development",
     desc: "Speed-optimized, high-converting, clean-coded custom sites to capture and turn traffic into clients.",
     icon: Monitor,
@@ -22,6 +24,7 @@ const services = [
   },
   {
     id: "service-seo",
+    slug: "seo",
     title: "Website SEO",
     desc: "Top ranks on Google Search & Map Pack to make your business the default local option.",
     icon: Search,
@@ -34,6 +37,7 @@ const services = [
   },
   {
     id: "service-social",
+    slug: "social-media",
     title: "Social Media Management",
     desc: "A consistent content calendar, Reels, strategy, and custom design templates to build absolute authority.",
     icon: Smartphone,
@@ -46,6 +50,7 @@ const services = [
   },
   {
     id: "service-ads",
+    slug: "paid-advertising",
     title: "Paid Advertising",
     desc: "High ROAS Meta & Google ads optimized with precise pixels and target audience definitions.",
     icon: Zap,
@@ -108,7 +113,13 @@ function TiltCard({ service }) {
           ))}
         </ul>
       </div>
-      <button id={`services-btn-${service.title.toLowerCase().replace(" ", "-")}`} className="btn-primary w-full !py-3 !text-xs font-semibold">Enquire Now</button>
+      <Link 
+        href={`/services/${service.slug}`}
+        id={`services-btn-${service.slug}`} 
+        className="btn-primary w-full !py-3 !text-xs font-semibold text-center"
+      >
+        Learn Strategy
+      </Link>
     </div>
   );
 }
