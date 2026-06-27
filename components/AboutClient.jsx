@@ -46,7 +46,7 @@ export default function AboutClient() {
       <Navbar />
       <MouseGlow />
 
-      <main className="pt-32 pb-24 relative overflow-hidden min-h-screen bg-bg-primary text-white">
+      <main className="pt-32 pb-24 relative overflow-hidden min-h-screen bg-bg-primary text-slate-900">
         <div className="absolute top-1/4 left-1/4 w-[600px] h-[300px] bg-amber-500/5 blur-[120px] rounded-full pointer-events-none" />
 
         <div className="container-tight relative z-10">
@@ -126,7 +126,7 @@ export default function AboutClient() {
           {/* CTA */}
           <div className="text-center bg-white/[0.01] border border-white/[0.03] p-12 md:p-16 rounded-2xl relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-amber-500/5 to-transparent pointer-events-none" />
-            <h2 className="text-2xl md:text-4xl font-extrabold tracking-tight text-white mb-6">
+            <h2 className="text-2xl md:text-4xl font-extrabold tracking-tight text-slate-900 mb-6">
               Partner with execution leads.
             </h2>
             <p className="text-xs sm:text-sm text-text-secondary max-w-md mx-auto mb-8 font-light leading-relaxed">

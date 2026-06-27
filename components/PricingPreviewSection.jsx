@@ -10,7 +10,7 @@ export default function PricingPreviewSection() {
 
   return (
     <section 
-      className="py-24 bg-bg-primary text-white relative overflow-hidden" 
+      className="py-24 bg-bg-primary text-slate-900 relative overflow-hidden" 
       id="pricing-preview"
       aria-labelledby="pricing-preview-title"
     >
@@ -87,7 +87,7 @@ export default function PricingPreviewSection() {
           <Link 
             href="/pricing" 
             id="preview-full-pricing-btn"
-            className="inline-flex items-center text-xs font-bold uppercase tracking-wider text-white hover:text-amber-400 transition-colors duration-300"
+            className="inline-flex items-center text-xs font-bold uppercase tracking-wider text-slate-900 hover:text-amber-400 transition-colors duration-300"
           >
             View Full Pricing & Add-ons
             <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

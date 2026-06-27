@@ -221,7 +221,7 @@ Message: ${formData.message}
                   </div>
                   <div>
                     <span className="text-[10px] text-text-tertiary uppercase tracking-wider block mb-0.5">Email</span>
-                                        <a href="mailto:hello@growthnest.in" onClick={trackEmailClick} className="text-xs text-white font-medium hover:text-amber-400 transition-colors">
+                                        <a href="mailto:hello@growthnest.in" onClick={trackEmailClick} className="text-xs text-slate-900 font-medium hover:text-amber-400 transition-colors">
                       hello@growthnest.in
                     </a>
                   </div>
@@ -238,7 +238,7 @@ Message: ${formData.message}
                       target="_blank"
                       rel="noreferrer noopener"
                       onClick={trackPhoneClick}
-                      className="text-xs text-white font-medium hover:text-amber-400 transition-colors"
+                      className="text-xs text-slate-900 font-medium hover:text-amber-400 transition-colors"
                     >
                       +91 62908 19569
                     </a>
@@ -251,7 +251,7 @@ Message: ${formData.message}
                   </div>
                   <div>
                     <span className="text-[10px] text-text-tertiary uppercase tracking-wider block mb-0.5">Office Hours</span>
-                    <span className="text-xs text-white font-medium">
+                    <span className="text-xs text-slate-900 font-medium">
                       Mon – Fri: 9:00 AM – 6:00 PM (IST)
                     </span>
                     <span className="text-[10px] text-text-tertiary block mt-0.5 font-light">
@@ -265,7 +265,7 @@ Message: ${formData.message}
               <div className="glass p-8 bg-white/[0.01] border border-white/[0.02] space-y-4">
                 <div className="flex items-center gap-2">
                   <Shield className="w-4 h-4 text-amber-400" />
-                  <h3 className="text-xs font-bold text-white uppercase tracking-wider">What Happens Next?</h3>
+                  <h3 className="text-xs font-bold text-slate-900 uppercase tracking-wider">What Happens Next?</h3>
                 </div>
                 <ul className="space-y-3 text-[11px] text-text-secondary leading-relaxed font-light list-decimal pl-4">
                   <li>Our technical lead pulls your PageSpeed and GBP map coordinates.</li>
