@@ -33,7 +33,7 @@ export default function Footer() {
             <img 
               src="/Horizontal_logo.png" 
               alt="Growth Nest" 
-              className="w-56 sm:w-72 md:w-[360px] h-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]" 
+              className="w-48 sm:w-60 md:w-72 h-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]" 
             />
           </Link>
           <p className="body-sm text-xs leading-relaxed max-w-xs font-light text-text-secondary">
