@@ -102,8 +102,8 @@ export default function ProcessTimeline() {
       <div className="container-tight relative z-10 max-w-3xl">
         <div className="text-center mb-20">
           <span className="label mb-4 block">Our Process</span>
-          <h2 id="process-title" className="text-3xl md:text-5xl font-extrabold tracking-tight text-white">
-            Four Steps to <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-amber-400">Unstoppable Growth</span>
+                    <h2 id="process-title" className="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900">
+            Four Steps to <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-amber-500">Unstoppable Growth</span>
           </h2>
           <p className="body-md mt-4 max-w-xl mx-auto font-light text-text-secondary">
             A transparent, technical-first framework that consistently scales local businesses.
@@ -126,8 +126,8 @@ export default function ProcessTimeline() {
                     animate={isActive ? { scale: 1.1 } : { scale: 1 }}
                     className={`relative z-10 w-10 h-10 rounded-lg flex items-center justify-center font-bold text-sm transition-all duration-300 border ${
                       isActive
-                        ? `bg-gradient-to-br ${step.color} border-transparent text-black`
-                        : "bg-bg-card border-white/[0.03] text-text-tertiary group-hover:border-white/[0.08]"
+                        ? `bg-gradient-to-br ${step.color} border-transparent text-white`
+                        : "bg-white border-slate-200 text-slate-400 group-hover:border-slate-300"
                     }`}
                     style={isActive ? { boxShadow: `0 0 20px ${step.glowColor}` } : {}}
                   >
@@ -152,11 +152,11 @@ export default function ProcessTimeline() {
                 <div className="pb-10 flex-1">
                   <div
                     className={`p-6 rounded-xl border transition-all duration-300 ${
-                      isActive ? "glass border-amber-500/20 bg-white/[0.01]" : "border-transparent hover:bg-white/[0.01]"
+                      isActive ? "bg-white border-amber-400/30 shadow-md shadow-cyan-100/50" : "border-transparent bg-slate-50/50 hover:bg-white/80"
                     }`}
                   >
                     <div className="flex flex-col md:flex-row md:items-center gap-2">
-                      <h3 className="text-base font-bold text-white">{step.title}</h3>
+                                          <h3 className="text-base font-bold text-slate-900">{step.title}</h3>
                       <span className="text-xs text-amber-400 font-semibold md:before:content-['•_'] md:before:mr-1">
                         {step.subtitle}
                       </span>

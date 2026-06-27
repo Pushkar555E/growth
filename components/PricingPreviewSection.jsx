@@ -20,8 +20,8 @@ export default function PricingPreviewSection() {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <span className="label mb-4 block">Social Media Teaser</span>
-          <h2 id="pricing-preview-title" className="text-3xl md:text-5xl font-extrabold tracking-tight text-white mb-6">
-            Pricing that <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-amber-400">Scales</span>
+                    <h2 id="pricing-preview-title" className="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-6">
+            Pricing that <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-amber-500">Scales</span>
           </h2>
           <p className="body-md mt-4 max-w-xl mx-auto font-light text-text-secondary">
             Transparent, zero-BS packages designed to turn your online presence into a revenue-generating machine.
@@ -49,10 +49,10 @@ export default function PricingPreviewSection() {
                     <Sparkles className="w-3.5 h-3.5 mr-1" /> Most Popular
                   </div>
                 )}
-                <h3 className="text-xl font-bold text-white mb-2">{pkg.name}</h3>
+                                <h3 className="text-xl font-bold text-slate-900 mb-2">{pkg.name}</h3>
                 <p className="text-xs text-text-secondary mb-6 h-10 font-light">{pkg.description}</p>
                 <div className="mb-8">
-                  <span className="text-3xl font-extrabold text-white">₹{pkg.price}</span>
+                                    <span className="text-3xl font-extrabold text-slate-900">₹{pkg.price}</span>
                   <span className="text-xs text-text-tertiary">/month</span>
                 </div>
                 <ul className="space-y-4 mb-8">

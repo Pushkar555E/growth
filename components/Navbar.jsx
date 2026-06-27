@@ -16,7 +16,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 border-b border-white/[0.02] bg-[#0f172a]/70 backdrop-blur-xl">
+    <header className="fixed top-0 left-0 w-full z-50 border-b border-slate-200/70 bg-white/80 backdrop-blur-xl shadow-sm">
       <nav 
         className="container-tight flex items-center justify-between h-16" 
         aria-label="Global Navigation"
@@ -46,7 +46,7 @@ export default function Navbar() {
               GN
             </span>
           </div>
-                    <span className="font-bold text-sm uppercase tracking-[0.2em] text-white group-hover:text-amber-400 transition-colors duration-300">
+                    <span className="font-bold text-sm uppercase tracking-[0.2em] text-slate-900 group-hover:text-amber-500 transition-colors duration-300">
             Growth Nest
           </span>
         </Link>
@@ -56,12 +56,12 @@ export default function Navbar() {
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
             return (
-              <Link
+                            <Link
                 key={link.id}
                 id={link.id}
                 href={link.href}
                 className={`text-xs font-medium uppercase tracking-widest transition-colors duration-300 ${
-                  isActive ? "text-amber-400" : "text-text-secondary hover:text-text-primary"
+                  isActive ? "text-amber-500 font-semibold" : "text-slate-500 hover:text-slate-900"
                 }`}
               >
                 {link.label}

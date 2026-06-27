@@ -24,17 +24,17 @@ export default function AboutTeaser() {
           >
             <div className="glass p-8 bg-bg-card/60 flex flex-col gap-6">
               <span className="text-xs font-semibold uppercase tracking-widest text-amber-400">Our Core Philosophy</span>
-              <h3 className="text-xl font-bold text-white">We treat marketing like engineering.</h3>
+                            <h3 className="text-xl font-bold text-slate-900">We treat marketing like engineering.</h3>
               <p className="body-sm text-text-secondary leading-relaxed font-light">
                 Traditional agencies focus on vanity metrics like "impressions" and "engagement". We focus on technical speed scores, search map positions, conversion targets, and direct leads. If it doesn't bring clients, we don't build it.
               </p>
               <div className="flex gap-4">
                 <div className="p-4 bg-white/[0.01] border border-white/[0.02] rounded-lg">
-                  <div className="text-xs font-bold text-white mb-1">Technical First</div>
+                  <div className="text-xs font-bold text-slate-900 mb-1">Technical First</div>
                   <div className="text-[10px] text-text-tertiary">Clean React code only.</div>
                 </div>
                 <div className="p-4 bg-white/[0.01] border border-white/[0.02] rounded-lg">
-                  <div className="text-xs font-bold text-white mb-1">Direct Metric</div>
+                  <div className="text-xs font-bold text-slate-900 mb-1">Direct Metric</div>
                   <div className="text-[10px] text-text-tertiary">Direct lead phone calls.</div>
                 </div>
               </div>
@@ -50,9 +50,9 @@ export default function AboutTeaser() {
             className="space-y-6"
           >
             <span className="label block">About The Agency</span>
-            <h2 id="about-teaser-title" className="text-3xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
+                        <h2 id="about-teaser-title" className="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
               We Build Assets <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-amber-400">That Capture Traffic</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-amber-500">That Capture Traffic</span>
             </h2>
             <p className="body-md font-light text-text-secondary leading-relaxed">
               We are a team of senior developers and copywriters who custom build responsive search engine blueprints and ad pipelines. We don't use WordPress, Wix, or standard templates. Every asset is built for high speed and direct conversion.

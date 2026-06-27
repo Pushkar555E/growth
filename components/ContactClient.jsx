@@ -70,7 +70,7 @@ Message: ${formData.message}
       <Navbar />
       <MouseGlow />
 
-      <main className="pt-32 pb-24 relative overflow-hidden min-h-screen bg-bg-primary text-white">
+            <main className="pt-32 pb-24 relative overflow-hidden min-h-screen bg-bg-primary">
         {/* Background glow */}
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-amber-500/5 blur-[120px] rounded-full pointer-events-none" />
 
@@ -78,8 +78,8 @@ Message: ${formData.message}
           
           <div className="text-center mb-16">
             <span className="label mb-4 block">Let&apos;s Scale Your Business</span>
-            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-white mb-4">
-              Get in Touch with our <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-amber-400">Execution Leads</span>
+                        <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-4">
+              Get in Touch with our <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-amber-500">Execution Leads</span>
             </h1>
             <p className="body-md max-w-xl mx-auto font-light text-text-secondary">
               Claim your free audit report or book a direct strategy call. We reply to all inquiries in under 12 hours.
@@ -94,7 +94,7 @@ Message: ${formData.message}
                 {submitted ? (
                   <div className="text-center py-12">
                     <CheckCircle2 className="w-12 h-12 text-emerald-500 mx-auto mb-4" />
-                    <h2 className="text-2xl font-bold text-white mb-3">Audit Requested Successfully!</h2>
+                                        <h2 className="text-2xl font-bold text-slate-900 mb-3">Audit Requested Successfully!</h2>
                     <p className="text-xs text-text-secondary mb-8 font-light leading-relaxed">
                       Thank you. We have received your request. Our execution team is running a local maps and technical speed audit on your site now. Expect your custom roadmap in under 12 hours.
                     </p>
@@ -126,7 +126,7 @@ Message: ${formData.message}
                           placeholder="Rahul Sharma"
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                          className="w-full bg-white/[0.02] border border-white/[0.04] rounded-lg px-4 py-3 text-xs text-white placeholder:text-text-muted focus:outline-none focus:border-amber-500/50 transition-colors disabled:opacity-50"
+                          className="w-full bg-white border border-slate-200 rounded-lg px-4 py-3 text-xs text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition-all disabled:opacity-50"
                         />
                       </div>
 
@@ -142,7 +142,7 @@ Message: ${formData.message}
                           placeholder="rahul@business.com"
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          className="w-full bg-white/[0.02] border border-white/[0.04] rounded-lg px-4 py-3 text-xs text-white placeholder:text-text-muted focus:outline-none focus:border-amber-500/50 transition-colors disabled:opacity-50"
+                          className="w-full bg-white border border-slate-200 rounded-lg px-4 py-3 text-xs text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition-all disabled:opacity-50"
                         />
                       </div>
                     </div>
@@ -160,7 +160,7 @@ Message: ${formData.message}
                           placeholder="Sharma Diagnostics"
                           value={formData.business}
                           onChange={(e) => setFormData({ ...formData, business: e.target.value })}
-                          className="w-full bg-white/[0.02] border border-white/[0.04] rounded-lg px-4 py-3 text-xs text-white placeholder:text-text-muted focus:outline-none focus:border-amber-500/50 transition-colors disabled:opacity-50"
+                          className="w-full bg-white border border-slate-200 rounded-lg px-4 py-3 text-xs text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition-all disabled:opacity-50"
                         />
                       </div>
 
@@ -176,7 +176,7 @@ Message: ${formData.message}
                           placeholder="+91 62908 19569"
                           value={formData.whatsapp}
                           onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
-                          className="w-full bg-white/[0.02] border border-white/[0.04] rounded-lg px-4 py-3 text-xs text-white placeholder:text-text-muted focus:outline-none focus:border-amber-500/50 transition-colors disabled:opacity-50"
+                          className="w-full bg-white border border-slate-200 rounded-lg px-4 py-3 text-xs text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition-all disabled:opacity-50"
                         />
                       </div>
                     </div>
@@ -192,7 +192,7 @@ Message: ${formData.message}
                         placeholder="Tell us about your current speed bottlenecks or local ranking hurdles..."
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        className="w-full bg-white/[0.02] border border-white/[0.04] rounded-lg px-4 py-3 text-xs text-white placeholder:text-text-muted focus:outline-none focus:border-amber-500/50 transition-colors disabled:opacity-50 resize-none"
+                        className="w-full bg-white border border-slate-200 rounded-lg px-4 py-3 text-xs text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition-all disabled:opacity-50 resize-none"
                       />
                     </div>
 
@@ -213,7 +213,7 @@ Message: ${formData.message}
               
               {/* Direct Info */}
               <div className="glass p-8 bg-bg-card/50 border border-white/[0.02] space-y-6">
-                <h3 className="text-sm font-bold text-white uppercase tracking-wider">Direct Contacts</h3>
+                                <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wider">Direct Contacts</h3>
                 
                 <div className="flex items-start gap-4">
                   <div className="p-2.5 rounded-lg bg-white/[0.02] border border-white/[0.04] shrink-0">

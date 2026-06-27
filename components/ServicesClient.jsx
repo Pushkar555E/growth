@@ -100,7 +100,7 @@ function TiltCard({ service }) {
         <div className="mb-6">
           <Icon className="w-6 h-6 text-amber-400" />
         </div>
-        <h2 className="text-xl font-bold mb-4 text-white">{service.title}</h2>
+                <h2 className="text-xl font-bold mb-4 text-slate-900">{service.title}</h2>
         <p className="text-xs text-text-secondary mb-8 leading-relaxed font-light">{service.desc}</p>
         <ul className="space-y-3 mb-8">
           {service.features.map((feature, idx) => (
@@ -136,8 +136,8 @@ export default function ServicesClient() {
         <div className="container-tight relative z-10">
           <div className="text-center mb-20">
             <span className="label mb-4 block">What We Do</span>
-            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-6">
-              Our Premium <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-amber-400">Growth Services</span>
+                        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-6">
+              Our Premium <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-amber-500">Growth Services</span>
             </h1>
             <p className="body-md max-w-xl mx-auto font-light text-text-secondary">
               Custom-built lead generation assets and audience scaling campaigns mapped strictly to revenue.

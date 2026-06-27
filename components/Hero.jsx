@@ -29,20 +29,20 @@ export default function Hero() {
   return (
     <section
       ref={containerRef}
-      className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-gradient-to-br from-white via-slate-50 to-cyan-50/30"
       aria-labelledby="hero-title"
     >
       {/* Grid overlay background */}
-      <div className="absolute inset-0 hero-grid opacity-[0.2] pointer-events-none" />
+      <div className="absolute inset-0 hero-grid opacity-[0.6] pointer-events-none" />
 
       {/* Floating background gradient blobs */}
-      <div className="absolute top-1/4 left-1/2 w-[600px] h-[400px] bg-blob bg-blob-purple animate-pulse-slow pointer-events-none" />
-      <div className="absolute bottom-10 left-1/4 w-[400px] h-[400px] bg-blob bg-blob-cyan animate-float opacity-10 pointer-events-none" />
+      <div className="absolute top-1/4 left-1/2 w-[600px] h-[400px] bg-blob bg-blob-cyan animate-pulse-slow pointer-events-none" />
+      <div className="absolute bottom-10 left-1/4 w-[400px] h-[400px] bg-blob bg-blob-purple animate-float opacity-10 pointer-events-none" />
 
       <div className="container-tight relative z-10 flex flex-col items-center text-center">
         {/* Badge */}
         <div ref={badgeRef} className="mb-8 opacity-0">
-          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[10px] font-semibold tracking-widest uppercase bg-amber-500/10 border border-amber-500/20 text-amber-300">
+          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[10px] font-semibold tracking-widest uppercase bg-amber-500/10 border border-amber-500/25 text-amber-600">
             <span className="relative flex h-1.5 w-1.5">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75" />
               <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-amber-400" />
@@ -55,16 +55,16 @@ export default function Hero() {
         <h1 
           ref={titleRef} 
           id="hero-title" 
-          className="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-white max-w-4xl mb-6 opacity-0 leading-[1.05]"
+          className="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 max-w-4xl mb-6 opacity-0 leading-[1.05]"
         >
           We help businesses generate <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-amber-200 to-amber-500">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-cyan-600 to-amber-500">
             more qualified leads.
           </span>
         </h1>
 
         {/* Description */}
-        <p ref={descRef} className="text-base sm:text-lg md:text-xl text-text-secondary max-w-2xl mb-12 opacity-0 leading-relaxed font-light">
+        <p ref={descRef} className="text-base sm:text-lg md:text-xl text-slate-500 max-w-2xl mb-12 opacity-0 leading-relaxed font-light">
           Performance-focused digital marketing for brands that want measurable growth.
         </p>
 
@@ -92,7 +92,7 @@ export default function Hero() {
         {/* Proof Line */}
         <p 
           ref={proofRef} 
-          className="text-[11px] uppercase tracking-widest text-text-tertiary mt-8 font-semibold opacity-0"
+          className="text-[11px] uppercase tracking-widest text-slate-400 mt-8 font-semibold opacity-0"
         >
           Trusted by growing brands across SEO, ads, and social media
         </p>

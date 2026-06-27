@@ -30,7 +30,7 @@ export default function ContactFormSection() {
         body: JSON.stringify({
           access_key: "998039d1-14f5-4114-82c5-2e0d6caca091",
           subject: `New Homepage Lead: Free Growth Audit - ${formData.business}`,
-          from_name: "Conversion X Lead Engine",
+          from_name: "Growth Nest Lead Engine",
           name: formData.name,
           email: formData.email,
           message: `
@@ -69,9 +69,9 @@ WhatsApp: ${formData.whatsapp}
           {/* Text Info */}
           <div className="lg:col-span-5 space-y-6">
             <span className="label block">Get Audited</span>
-            <h2 id="home-contact-title" className="text-3xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
+                        <h2 id="home-contact-title" className="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
               Claim Your <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-amber-400">Free Growth Audit</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-amber-500">Free Growth Audit</span>
             </h2>
             <p className="body-md font-light text-text-secondary leading-relaxed">
               We perform a direct audit of your Google search rankings, maps rankings, competitor traffic volume, and mobile performance speeds. No obligation, 100% free.
@@ -101,7 +101,7 @@ WhatsApp: ${formData.whatsapp}
                 {submitted ? (
                   <div className="text-center py-8">
                     <CheckCircle2 className="w-8 h-8 text-emerald-400 mx-auto mb-4" />
-                    <h3 className="text-xl font-bold text-white mb-2">Audit Requested Successfully!</h3>
+                                        <h3 className="text-xl font-bold text-slate-900 mb-2">Audit Requested Successfully!</h3>
                     <p className="text-xs text-text-secondary mb-6 font-light">
                       Thank you! Your free growth audit request has been sent. We will review your site and email you a custom blueprint report in 24 hours.
                     </p>
@@ -132,7 +132,7 @@ WhatsApp: ${formData.whatsapp}
                           placeholder="Rahul Sharma"
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                          className="w-full bg-white/[0.02] border border-white/[0.04] rounded-lg px-4 py-2.5 text-xs text-white placeholder:text-text-muted focus:outline-none focus:border-amber-500/50 transition-colors disabled:opacity-50"
+                          className="w-full bg-white border border-slate-200 rounded-lg px-4 py-2.5 text-xs text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition-all disabled:opacity-50"
                         />
                       </div>
                       <div>
@@ -147,7 +147,7 @@ WhatsApp: ${formData.whatsapp}
                           placeholder="rahul@business.com"
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          className="w-full bg-white/[0.02] border border-white/[0.04] rounded-lg px-4 py-2.5 text-xs text-white placeholder:text-text-muted focus:outline-none focus:border-amber-500/50 transition-colors disabled:opacity-50"
+                          className="w-full bg-white border border-slate-200 rounded-lg px-4 py-2.5 text-xs text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition-all disabled:opacity-50"
                         />
                       </div>
                     </div>
@@ -165,7 +165,7 @@ WhatsApp: ${formData.whatsapp}
                           placeholder="Sharma Clinic / Dental Care"
                           value={formData.business}
                           onChange={(e) => setFormData({ ...formData, business: e.target.value })}
-                          className="w-full bg-white/[0.02] border border-white/[0.04] rounded-lg px-4 py-2.5 text-xs text-white placeholder:text-text-muted focus:outline-none focus:border-amber-500/50 transition-colors disabled:opacity-50"
+                          className="w-full bg-white border border-slate-200 rounded-lg px-4 py-2.5 text-xs text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition-all disabled:opacity-50"
                         />
                       </div>
                       <div>
@@ -180,7 +180,7 @@ WhatsApp: ${formData.whatsapp}
                           placeholder="+91 62908 19569"
                           value={formData.whatsapp}
                           onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
-                          className="w-full bg-white/[0.02] border border-white/[0.04] rounded-lg px-4 py-2.5 text-xs text-white placeholder:text-text-muted focus:outline-none focus:border-amber-500/50 transition-colors disabled:opacity-50"
+                          className="w-full bg-white border border-slate-200 rounded-lg px-4 py-2.5 text-xs text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition-all disabled:opacity-50"
                         />
                       </div>
                     </div>

@@ -28,8 +28,8 @@ export default function IndustriesClient() {
         <div className="container-tight relative z-10">
           <div className="text-center mb-20">
             <span className="label mb-4 block">Who We Serve</span>
-            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-6">
-              Industries We <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-amber-400">Scale Continuously</span>
+            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-6">
+              Industries We <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-amber-500">Specialize In</span>
             </h1>
             <p className="body-md max-w-xl mx-auto font-light text-text-secondary">
               We build custom SEO and paid acquisition blueprints targeted to your industry's exact client profile.
@@ -51,7 +51,7 @@ export default function IndustriesClient() {
                   <div>
                     <div className="flex items-center gap-4 mb-6">
                       <Icon className="w-8 h-8 text-amber-400" />
-                      <h2 className="text-xl font-bold text-white">{ind.name}</h2>
+                                            <h2 className="text-xl font-bold text-slate-900">{ind.name}</h2>
                     </div>
                     <p className="text-xs text-text-secondary leading-relaxed mb-8 font-light">{ind.desc}</p>
                   </div>

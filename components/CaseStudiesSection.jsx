@@ -50,8 +50,8 @@ export default function CaseStudiesSection() {
       <div className="container-tight relative z-10">
         <div className="text-center mb-20">
           <span className="label mb-4 block">Case Studies</span>
-          <h2 id="case-studies-title" className="text-3xl md:text-5xl font-extrabold tracking-tight text-white">
-            Real Proof. <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-amber-400">Real Results.</span>
+                    <h2 id="case-studies-title" className="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900">
+            Real Proof. <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-amber-500">Real Results.</span>
           </h2>
           <p className="body-md mt-4 max-w-xl mx-auto font-light text-text-secondary">
             We don't buy fake reviews. Here are the exact growth metrics we've delivered for our clients.
@@ -80,13 +80,13 @@ export default function CaseStudiesSection() {
                       {study.sub}
                     </span>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-8">{study.title}</h3>
+                                    <h3 className="text-xl font-bold text-slate-900 mb-8">{study.title}</h3>
 
                   {/* Horizontal Bar Chart 1 */}
                   <div className="mb-6">
                     <div className="flex justify-between text-xs mb-1.5 font-medium">
                       <span className="text-text-secondary">{study.metric1.name}</span>
-                      <span className="text-white font-bold">{study.metric1.value}</span>
+                      <span className="text-slate-900 font-bold">{study.metric1.value}</span>
                     </div>
                     <div className="w-full h-1 bg-white/5 rounded-full overflow-hidden">
                       <motion.div
@@ -103,7 +103,7 @@ export default function CaseStudiesSection() {
                   <div className="mb-6">
                     <div className="flex justify-between text-xs mb-1.5 font-medium">
                       <span className="text-text-secondary">{study.metric2.name}</span>
-                      <span className="text-white font-bold">{study.metric2.value}</span>
+                      <span className="text-slate-900 font-bold">{study.metric2.value}</span>
                     </div>
                     <div className="w-full h-1 bg-white/5 rounded-full overflow-hidden">
                       <motion.div
@@ -120,7 +120,7 @@ export default function CaseStudiesSection() {
                   <div className="mb-6">
                     <div className="flex justify-between text-xs mb-1.5 font-medium">
                       <span className="text-text-secondary">{study.metric3.name}</span>
-                      <span className="text-white font-bold">{study.metric3.value}</span>
+                      <span className="text-slate-900 font-bold">{study.metric3.value}</span>
                     </div>
                     <div className="w-full h-1 bg-white/5 rounded-full overflow-hidden">
                       <motion.div

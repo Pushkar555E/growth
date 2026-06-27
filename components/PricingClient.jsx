@@ -29,8 +29,8 @@ export default function PricingClient() {
         <div className="container-tight relative z-10">
           <div className="text-center mb-16">
             <span className="label mb-4 block">Our Plans</span>
-            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-6">
-              Invest in <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-amber-400">Scalable Growth</span>
+            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-6">
+              Simple, Transparent <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-amber-500">Pricing</span>
             </h1>
             <p className="body-md max-w-xl mx-auto font-light text-text-secondary">
               No locked contracts. Cancel anytime. Choose the service you need to scale your traffic.
@@ -150,10 +150,10 @@ function SocialPricingView() {
                 <Sparkles className="w-3.5 h-3.5 mr-1" /> Most Popular
               </div>
             )}
-            <h3 className="text-xl font-bold mb-2 text-white">{pkg.name}</h3>
+                        <h3 className="text-xl font-bold mb-2 text-slate-900">{pkg.name}</h3>
             <p className="text-text-secondary text-xs mb-6 h-10 font-light leading-relaxed">{pkg.description}</p>
             <div className="mb-8">
-              <span className="text-3xl font-extrabold text-white">₹{pkg.price}</span>
+                            <span className="text-3xl font-extrabold text-slate-900">₹{pkg.price}</span>
               <span className="text-xs text-text-tertiary">/month</span>
             </div>
             <ul className="space-y-4 mb-8">
@@ -193,9 +193,9 @@ function SEOPricingView() {
                 <Sparkles className="w-3.5 h-3.5 mr-1" /> Most Popular
               </div>
             )}
-            <h3 className="text-xl font-bold mb-6 text-white">{pkg.name}</h3>
+                        <h3 className="text-xl font-bold mb-6 text-slate-900">{pkg.name}</h3>
             <div className="mb-8">
-              <span className="text-3xl font-extrabold text-white">₹{pkg.price}</span>
+                            <span className="text-3xl font-extrabold text-slate-900">₹{pkg.price}</span>
               <span className="text-xs text-text-tertiary">/month</span>
             </div>
             <ul className="space-y-4 mb-8">

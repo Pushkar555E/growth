@@ -82,12 +82,12 @@ export default function TrustCounters() {
               <div
                 key={stat.id}
                 id={stat.id}
-                className="counter-card glass p-8 flex flex-col items-center text-center opacity-0 hover:bg-white/[0.02] hover:border-white/[0.06] transition-all duration-300"
+                className="counter-card glass p-8 flex flex-col items-center text-center opacity-0 hover:shadow-lg transition-all duration-300"
               >
                 <div className="mb-4">
                   <Icon className="w-5 h-5 text-amber-400" />
                 </div>
-                <div className="text-3xl md:text-4xl font-extrabold tracking-tight text-white mb-2">
+                <div className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 mb-2">
                   <span className="counter-number" data-target={stat.value}>
                     0
                   </span>

@@ -30,16 +30,16 @@ export default function FAQSection() {
   };
 
   return (
-    <section 
-      className="py-24 bg-[#0f172a]" 
+        <section 
+      className="py-24 bg-slate-50" 
       id="faq"
       aria-labelledby="faq-title"
     >
       <div className="container-tight max-w-2xl">
         <div className="text-center mb-16">
           <span className="label mb-4 block">Help Center</span>
-          <h2 id="faq-title" className="text-3xl md:text-5xl font-extrabold tracking-tight text-white">
-            Frequently Asked <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-amber-400">Questions</span>
+                    <h2 id="faq-title" className="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900">
+            Frequently Asked <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-amber-500">Questions</span>
           </h2>
         </div>
 
@@ -58,7 +58,7 @@ export default function FAQSection() {
                   aria-expanded={isOpen}
                   aria-controls={`faq-panel-${idx}`}
                 >
-                  <span className="font-semibold text-white text-sm md:text-base">
+                                    <span className="font-semibold text-slate-900 text-sm md:text-base">
                     {faq.q}
                   </span>
                   <span className="ml-4 shrink-0">

@@ -54,8 +54,8 @@ export default function AboutClient() {
           {/* Hero Story */}
           <div className="max-w-3xl mb-24">
             <span className="label mb-4 block">Our Story</span>
-            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-8">
-              We treat marketing like <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-amber-400">performance engineering.</span>
+                        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-8">
+              We treat marketing like <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-amber-500">performance engineering.</span>
             </h1>
                         <p className="body-md text-text-secondary leading-relaxed font-light mb-6">
               Founded on a simple realization: Most agencies sell visual vanity templates and generic traffic packages, while businesses need bookings and revenue.
@@ -66,7 +66,7 @@ export default function AboutClient() {
           </div>
 
           {/* Stats Bar */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-8 rounded-xl bg-white/[0.01] border border-white/[0.03] mb-24 text-center">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-8 rounded-xl bg-white border border-slate-200/60 shadow-sm mb-24 text-center">
             <div>
               <span className="text-3xl font-extrabold text-amber-400 block mb-1">50+</span>
               <span className="text-[10px] text-text-secondary uppercase tracking-wider font-light">Successful Campaigns</span>
@@ -93,7 +93,7 @@ export default function AboutClient() {
                       <div className="mb-6 p-2 bg-white/[0.02] border border-white/[0.04] rounded-lg inline-block">
                         <Icon className="w-5 h-5 text-amber-400" />
                       </div>
-                      <h3 className="text-base font-bold text-white mb-3">{val.title}</h3>
+                                            <h3 className="text-base font-bold text-slate-900 mb-3">{val.title}</h3>
                       <p className="text-xs text-text-secondary leading-relaxed font-light">{val.desc}</p>
                     </div>
                   </div>
@@ -116,7 +116,7 @@ export default function AboutClient() {
                   className="glass p-6 bg-bg-card/30 border border-white/[0.02] hover:border-white/[0.08] transition-all duration-300"
                 >
                   <span className="text-2xl font-extrabold text-amber-400/30 mb-3 block">{ws.step}</span>
-                  <h3 className="text-base font-bold text-white mb-2">{ws.title}</h3>
+                                     <h3 className="text-base font-bold text-slate-900 mb-2">{ws.title}</h3>
                   <p className="text-xs text-text-secondary leading-relaxed font-light">{ws.desc}</p>
                 </motion.div>
               ))}

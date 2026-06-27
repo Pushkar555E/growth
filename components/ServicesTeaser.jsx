@@ -45,8 +45,8 @@ export default function ServicesTeaser() {
       <div className="container-tight relative z-10">
         <div className="text-center mb-16">
           <span className="label mb-4 block">What We Offer</span>
-          <h2 id="teaser-title" className="text-3xl md:text-5xl font-extrabold tracking-tight text-white">
-            Built for <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-amber-400">Absolute Conversion</span>
+                    <h2 id="teaser-title" className="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900">
+            Built for <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-amber-500">Absolute Conversion</span>
           </h2>
           <p className="body-md mt-4 max-w-xl mx-auto font-light text-text-secondary">
             We don't use templates. We build custom-made lead generation assets that work.
@@ -71,7 +71,7 @@ export default function ServicesTeaser() {
                   <div className="mb-6">
                     <Icon className="w-5 h-5 text-amber-400" />
                   </div>
-                  <h3 className="text-base font-bold text-white mb-2">{svc.title}</h3>
+                                    <h3 className="text-base font-bold text-slate-900 mb-2">{svc.title}</h3>
                   <p className="text-xs text-text-secondary leading-relaxed mb-6 font-light">{svc.desc}</p>
                 </div>
                 <Link

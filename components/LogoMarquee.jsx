@@ -43,7 +43,7 @@ export default function LogoMarquee() {
   }, []);
 
   return (
-    <section ref={containerRef} className="py-16 overflow-hidden bg-black/40 opacity-0" id="logo-marquee">
+        <section ref={containerRef} className="py-16 overflow-hidden bg-slate-100/60 opacity-0" id="logo-marquee">
       <p className="text-center text-xs font-semibold tracking-widest text-text-tertiary uppercase mb-8">
         Trusted Platforms We Work With
       </p>

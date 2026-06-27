@@ -1,19 +1,19 @@
 @import "tailwindcss";
 
-/* ── Custom Theme System (Slate Blue & Electric Green Palette) ─── */
+/* ── Growth Nest — Light Theme Design System ─────────────── */
 @theme {
-  --color-bg-primary: #0b1120;
-  --color-bg-secondary: #0a1018;
-  --color-bg-card: #101826;
-  --color-text-primary: #f9fafb;
-  --color-text-secondary: #94a3b8;
-  --color-text-tertiary: #64748b;
-  
-  --color-border-subtle: rgba(255, 255, 255, 0.02);
-  --color-border-hover: rgba(255, 255, 255, 0.06);
+  --color-bg-primary:   #f8fafc;   /* near-white */
+  --color-bg-secondary: #f1f5f9;   /* soft light gray */
+  --color-bg-card:      #ffffff;   /* pure white cards */
+  --color-text-primary:   #0f172a;  /* dark slate */
+  --color-text-secondary: #475569;  /* medium slate */
+  --color-text-tertiary:  #94a3b8;  /* light slate */
+
+  --color-border-subtle: rgba(15, 23, 42, 0.08);
+  --color-border-hover:  rgba(15, 23, 42, 0.16);
 
   /* Growth Nest — Electric Cyan accent palette */
-  --color-amber-50: #ecfeff;
+  --color-amber-50:  #ecfeff;
   --color-amber-100: #cffafe;
   --color-amber-200: #a5f3fc;
   --color-amber-300: #67e8f9;
@@ -24,19 +24,18 @@
   --color-amber-800: #155e75;
   --color-amber-900: #164e63;
 
-  --color-accent-amber: #06b6d4;   /* primary cyan accent */
+  --color-accent-amber:  #06b6d4;  /* primary cyan accent */
   --color-accent-bronze: #2563eb;  /* supporting blue */
-  --color-accent-rose: #22c55e;
+  --color-accent-rose:   #22c55e;
 }
 
 /* ── Base resets ─────────────────────────────────────────── */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
+*, *::before, *::after { box-sizing: border-box; }
 
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
+  color-scheme: light;
 }
 
 body {
@@ -47,30 +46,34 @@ body {
   overflow-x: hidden;
 }
 
-/* ── Glassmorphism (Premium Obsidian style) ───────────────── */
+/* ── Glassmorphism — Light Card Style ─────────────────────── */
 .glass {
-  background: rgba(8, 8, 10, 0.8);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid var(--color-border-subtle);
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(15, 23, 42, 0.08);
   border-radius: 1rem;
-  transition: border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 16px rgba(15, 23, 42, 0.06);
+  transition: box-shadow 0.3s cubic-bezier(0.16,1,0.3,1),
+              border-color 0.3s cubic-bezier(0.16,1,0.3,1),
+              background 0.3s cubic-bezier(0.16,1,0.3,1);
 }
 
 .glass:hover {
-  border-color: var(--color-border-hover);
-  background: rgba(12, 12, 16, 0.9);
+  background: rgba(255, 255, 255, 0.96);
+  border-color: rgba(15, 23, 42, 0.14);
+  box-shadow: 0 8px 32px rgba(15, 23, 42, 0.1);
 }
 
-/* ── Gradient text (White to Amber Gold) ─────────────────── */
+/* ── Gradient text (Slate → Cyan) ─────────────────────────── */
 .gradient-text {
-  background: linear-gradient(135deg, #ffffff 40%, #22d3ee 100%);
+  background: linear-gradient(135deg, #0f172a 40%, #06b6d4 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* ── Glowing outline border (Stripe inspired) ────────────── */
+/* ── Glowing outline border (Cyan inspired) ───────────────── */
 .gradient-border {
   position: relative;
   border-radius: 1rem;
@@ -83,7 +86,7 @@ body {
   inset: -1px;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(135deg, rgba(6, 182, 212, 0.25), rgba(37, 99, 235, 0.1), rgba(255, 255, 255, 0.04));
+  background: linear-gradient(135deg, rgba(6,182,212,0.35), rgba(37,99,235,0.15), rgba(15,23,42,0.05));
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
@@ -91,59 +94,59 @@ body {
   pointer-events: none;
 }
 
-/* ── BG Glow Blobs (Amber / Gold style) ──────────────────── */
+/* ── BG Glow Blobs ────────────────────────────────────────── */
 .bg-blob {
   position: absolute;
   border-radius: 50%;
-  filter: blur(140px);
+  filter: blur(120px);
   pointer-events: none;
-  opacity: 0.06;
-  mix-blend-mode: plus-lighter;
+  opacity: 0.12;
+  mix-blend-mode: multiply;
 }
-.bg-blob-purple { background: radial-gradient(circle, #2563eb, transparent 70%); }
+.bg-blob-purple { background: radial-gradient(circle, #818cf8, transparent 70%); }
 .bg-blob-cyan   { background: radial-gradient(circle, #06b6d4, transparent 70%); }
 
-/* ── Mouse glow ──────────────────────────────────────────── */
+/* ── Mouse glow (light) ───────────────────────────────────── */
 .mouse-glow {
   position: fixed;
   width: 600px;
   height: 600px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(6, 182, 212, 0.05) 0%, rgba(37, 99, 235, 0.03) 50%, transparent 70%);
+  background: radial-gradient(circle, rgba(6,182,212,0.06) 0%, rgba(37,99,235,0.03) 50%, transparent 70%);
   pointer-events: none;
   z-index: 0;
   transform: translate(-50%, -50%);
   will-change: transform;
 }
 
-/* ── Section divider (Very faint) ────────────────────────── */
+/* ── Section divider ──────────────────────────────────────── */
 .section-divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.04), transparent);
+  background: linear-gradient(90deg, transparent, rgba(15,23,42,0.1), transparent);
 }
 
-/* ── Buttons (Electric Blue SaaS-like) ───────────────────── */
+/* ── Buttons ──────────────────────────────────────────────── */
 .btn-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
   padding: 0.75rem 1.5rem;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.875rem;
   color: #fff;
   background: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
   border-radius: 0.5rem;
-  border: 1px solid rgba(6, 182, 212, 0.2);
+  border: none;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 16px rgba(6, 182, 212, 0.2);
+  transition: all 0.3s cubic-bezier(0.16,1,0.3,1);
+  box-shadow: 0 4px 16px rgba(6,182,212,0.22), 0 1px 4px rgba(37,99,235,0.2);
 }
 
 .btn-primary:hover {
   background: linear-gradient(135deg, #3b82f6 0%, #22d3ee 100%);
   transform: translateY(-1px);
-  box-shadow: 0 8px 24px rgba(6, 182, 212, 0.35);
+  box-shadow: 0 8px 28px rgba(6,182,212,0.35), 0 2px 8px rgba(37,99,235,0.25);
 }
 
 .btn-secondary {
@@ -155,40 +158,40 @@ body {
   font-weight: 500;
   font-size: 0.875rem;
   color: var(--color-text-primary);
-  background: rgba(255, 255, 255, 0.01);
-  border: 1px solid rgba(255, 255, 255, 0.04);
+  background: rgba(15, 23, 42, 0.04);
+  border: 1px solid rgba(15, 23, 42, 0.12);
   border-radius: 0.5rem;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.3s cubic-bezier(0.16,1,0.3,1);
 }
 
 .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(15, 23, 42, 0.08);
+  border-color: rgba(15, 23, 42, 0.2);
   transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(15,23,42,0.08);
 }
 
-/* ── Card hover tilt animation ───────────────────────────── */
+/* ── Card hover ───────────────────────────────────────────── */
 .card-hover {
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.3s cubic-bezier(0.16,1,0.3,1);
 }
 .card-hover:hover {
-  transform: translateY(-2px);
-  border-color: rgba(255, 255, 255, 0.06);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(15,23,42,0.12);
 }
 
-/* ── Typography (SaaS tracking-tight) ───────────────────── */
-.heading-xl  { font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 800; letter-spacing: -0.04em; line-height: 1.1; }
-.heading-lg  { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.2; }
-.heading-md  { font-size: clamp(1.25rem, 2.5vw, 1.75rem); font-weight: 600; letter-spacing: -0.02em; line-height: 1.3; }
-.heading-sm  { font-size: 1.125rem; font-weight: 600; letter-spacing: -0.01em; line-height: 1.4; }
+/* ── Typography ────────────────────────────────────────────── */
+.heading-xl  { font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 800; letter-spacing: -0.04em; line-height: 1.1; color: var(--color-text-primary); }
+.heading-lg  { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.2; color: var(--color-text-primary); }
+.heading-md  { font-size: clamp(1.25rem, 2.5vw, 1.75rem); font-weight: 600; letter-spacing: -0.02em; line-height: 1.3; color: var(--color-text-primary); }
+.heading-sm  { font-size: 1.125rem; font-weight: 600; letter-spacing: -0.01em; line-height: 1.4; color: var(--color-text-primary); }
 .body-lg     { font-size: 1.125rem; line-height: 1.7; color: var(--color-text-secondary); }
 .body-md     { font-size: 1rem; line-height: 1.65; color: var(--color-text-secondary); }
 .body-sm     { font-size: 0.875rem; line-height: 1.6; color: var(--color-text-tertiary); }
-.label       { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-accent-amber); }
+.label       { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-accent-amber); }
 
-/* ── Container alignment ─────────────────────────────────── */
+/* ── Container alignment ──────────────────────────────────── */
 .container-tight {
   width: 100%;
   max-width: 1200px;
@@ -196,7 +199,7 @@ body {
   padding-inline: 1.5rem;
 }
 
-/* ── CSS Infinite marquee scroll ──────────────────────────── */
+/* ── CSS Infinite marquee scroll ────────────────────────────── */
 @keyframes marquee {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
@@ -208,29 +211,40 @@ body {
   animation: marquee 35s linear infinite;
 }
 
-/* ── Grid overlay background ─────────────────────────────── */
+/* ── Grid overlay background ────────────────────────────────── */
 .hero-grid {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.01) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
+  background-image:
+    linear-gradient(rgba(15,23,42,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15,23,42,0.04) 1px, transparent 1px);
   background-size: 50px 50px;
 }
 
-/* ── Floating Background Blobs Keyframes ─────────────────── */
+/* ── Floating Background Blobs Keyframes ────────────────────── */
 @keyframes float {
-  0%, 100% { transform: translateY(0px) rotate(0deg) translate(-50%, 0); }
-  33% { transform: translateY(-12px) rotate(1deg) translate(-50%, 0); }
-  66% { transform: translateY(6px) rotate(-1deg) translate(-50%, 0); }
+  0%, 100% { transform: translateY(0px) rotate(0deg) translate(-50%,0); }
+  33%       { transform: translateY(-12px) rotate(1deg) translate(-50%,0); }
+  66%       { transform: translateY(6px) rotate(-1deg) translate(-50%,0); }
 }
 
 @keyframes pulse-slow {
-  0%, 100% { opacity: 0.15; transform: scale(1) translate(-50%, 0); }
-  50% { opacity: 0.25; transform: scale(1.08) translate(-50%, 0); }
+  0%, 100% { opacity: 0.1; transform: scale(1) translate(-50%,0); }
+  50%       { opacity: 0.2; transform: scale(1.08) translate(-50%,0); }
 }
 
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
+.animate-float      { animation: float 6s ease-in-out infinite; }
+.animate-pulse-slow { animation: pulse-slow 5s ease-in-out infinite; }
 
-.animate-pulse-slow {
-  animation: pulse-slow 5s ease-in-out infinite;
+/* ── Form input — light style ──────────────────────────────── */
+.input-light {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid rgba(15,23,42,0.12);
+  border-radius: 0.5rem;
+  padding: 0.625rem 1rem;
+  font-size: 0.8125rem;
+  color: var(--color-text-primary);
+  transition: border-color 0.2s ease;
+  outline: none;
 }
+.input-light::placeholder { color: var(--color-text-tertiary); }
+.input-light:focus { border-color: #06b6d4; box-shadow: 0 0 0 3px rgba(6,182,212,0.12); }

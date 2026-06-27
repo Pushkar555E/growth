@@ -56,7 +56,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="dark scroll-smooth">
+    <html lang="en" className="scroll-smooth">
       <head>
         <link
           rel="preconnect"
@@ -82,7 +82,7 @@ export default function RootLayout({ children }) {
           `}
         </Script>
       </head>
-      <body className="min-h-screen bg-[#0f172a] text-white font-sans antialiased overflow-x-hidden selection:bg-amber-500/20 selection:text-white">
+      <body className="min-h-screen bg-slate-50 text-slate-900 font-sans antialiased overflow-x-hidden selection:bg-cyan-400/20 selection:text-slate-900">
         {/* Google Tag Manager - Body (noscript) */}
         <noscript>
           <iframe 
