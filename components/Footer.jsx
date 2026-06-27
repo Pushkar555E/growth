@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const footerLinks = {
   Services: [
@@ -22,6 +23,8 @@ const footerLinks = {
 };
 
 export default function Footer() {
+  const pathname = usePathname();
+
   return (
     <footer className="border-t border-white/[0.02] bg-[#060814] py-16" aria-label="Agency Footer">
       <div className="container-tight grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
@@ -47,17 +50,22 @@ export default function Footer() {
               {title}
             </h4>
             <ul className="space-y-2.5">
-              {links.map((link) => (
-                <li key={link.id}>
-                  <Link
-                    id={link.id}
-                    href={link.href}
-                    className="text-xs text-text-secondary hover:text-text-primary transition-colors duration-200"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
+              {links.map((link) => {
+                const isActive = pathname === link.href;
+                return (
+                  <li key={link.id}>
+                    <Link
+                      id={link.id}
+                      href={link.href}
+                      className={`text-xs transition-colors duration-200 ${
+                        isActive ? "text-amber-400 font-semibold" : "text-text-secondary hover:text-text-primary"
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         ))}
