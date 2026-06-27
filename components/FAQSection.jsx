@@ -36,12 +36,18 @@ export default function FAQSection() {
       aria-labelledby="faq-title"
     >
       <div className="container-tight max-w-2xl">
-        <div className="text-center mb-16">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
           <span className="label mb-4 block">Help Center</span>
                     <h2 id="faq-title" className="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900">
             Frequently Asked <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-amber-500">Questions</span>
           </h2>
-        </div>
+        </motion.div>
 
         <div className="space-y-4">
           {faqs.map((faq, idx) => {

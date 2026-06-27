@@ -18,7 +18,13 @@ export default function PricingPreviewSection() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-amber-600/5 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
           <span className="label mb-4 block">Social Media Teaser</span>
                     <h2 id="pricing-preview-title" className="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-6">
             Pricing that <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-amber-500">Scales</span>
@@ -26,7 +32,7 @@ export default function PricingPreviewSection() {
           <p className="body-md mt-4 max-w-xl mx-auto font-light text-text-secondary">
             Transparent, zero-BS packages designed to turn your online presence into a revenue-generating machine.
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {packages.map((pkg, index) => (

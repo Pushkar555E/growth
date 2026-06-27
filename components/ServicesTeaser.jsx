@@ -43,7 +43,13 @@ export default function ServicesTeaser() {
       aria-labelledby="teaser-title"
     >
       <div className="container-tight relative z-10">
-        <div className="text-center mb-16">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
           <span className="label mb-4 block">What We Offer</span>
                     <h2 id="teaser-title" className="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900">
             Built for <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-amber-500">Absolute Conversion</span>
@@ -51,7 +57,7 @@ export default function ServicesTeaser() {
           <p className="body-md mt-4 max-w-xl mx-auto font-light text-text-secondary">
             We don't use templates. We build custom-made lead generation assets that work.
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((svc, idx) => {

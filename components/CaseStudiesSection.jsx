@@ -48,7 +48,13 @@ export default function CaseStudiesSection() {
       aria-labelledby="case-studies-title"
     >
       <div className="container-tight relative z-10">
-        <div className="text-center mb-20">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-20"
+        >
           <span className="label mb-4 block">Case Studies</span>
                     <h2 id="case-studies-title" className="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900">
             Real Proof. <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-amber-500">Real Results.</span>
@@ -56,7 +62,7 @@ export default function CaseStudiesSection() {
           <p className="body-md mt-4 max-w-xl mx-auto font-light text-text-secondary">
             We don't buy fake reviews. Here are the exact growth metrics we've delivered for our clients.
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {caseStudies.map((study, idx) => {
