@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Mail, Phone, ArrowRight, MessageCircle } from "lucide-react";
 
@@ -30,9 +31,11 @@ export default function Footer() {
         {/* Brand - 3 cols */}
         <div className="lg:col-span-4 space-y-6">
           <Link href="/" id="footer-logo" className="inline-flex items-center group mb-6">
-            <img 
+            <Image 
               src="/Horizontal_logo.png" 
               alt="Growth Nest" 
+              width={288}
+              height={60}
               className="w-48 sm:w-60 md:w-72 h-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]" 
             />
           </Link>

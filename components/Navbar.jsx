@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
@@ -30,9 +31,12 @@ export default function Navbar() {
           id="nav-logo" 
           className="flex items-center group focus:outline-none shrink-0"
         >
-          <img 
+          <Image 
             src="/Horizontal_logo.png" 
             alt="Growth Nest" 
+            width={240}
+            height={48}
+            priority
             className="w-44 sm:w-52 md:w-60 h-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]" 
           />
         </Link>
